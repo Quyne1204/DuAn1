@@ -1,0 +1,42 @@
+:root {
+
+    /* Color */
+    --primary: #1435c3;
+    --white: #fff;
+    --text-color:#848788;
+
+    /* custom layout */
+
+    --header-width: 1232px;
+    --header-height: 42px;
+    --header-height-action:88px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8fc;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+

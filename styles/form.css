@@ -1,0 +1,46 @@
+#form {
+    width: var(--header-width);
+    margin: 0 auto;
+}
+
+.form-model {
+    background-color: var(--white);
+    min-height: 360px;
+    width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.form-title {
+    display: block;
+    margin: 12px 0;
+}
+
+.form-input {
+    border: 1px solid var(--text-color);
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    padding: 12px 12px;
+    font-size: 1.5rem;
+}
+
+.handel-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    padding: 12px;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.suggest {
+    margin-top: 20px;
+}
+
+.suggest > a {
+    color: var(--primary);
+}

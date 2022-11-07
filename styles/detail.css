@@ -1,0 +1,122 @@
+.detail-page {
+    display: flex;
+    width: var(--header-width);
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 16px;
+}
+
+.detail {
+    background-color: var(--white);
+    display: flex;
+    padding: 12px 20px;
+}
+
+.detail-img {
+    width: 327px;
+    height: 327px;
+    object-fit: cover;
+}
+
+.detail-item {
+    padding: 0 26px;
+}
+
+.detail-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.sub-title {
+    color: #82869e;
+    font-size: 1.4rem;
+}
+
+.detail-mark {
+    color: var(--primary);
+}
+
+.detail-price {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.detail-sale {
+    color: #82869e;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.sale-percent {
+    color: var(--primary);
+    margin-left: 6px;
+}
+
+.handel-buy {
+    background-color: var(--primary);
+    border-color: transparent;
+    color: var(--white);
+}
+
+.handel-add-cart {
+    background-color: var(--white);
+    border-color: var(--primary);
+}
+
+.handel-add-cart,.handel-buy { 
+    width: 50%;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+
+/* Chính sách khách hàng */
+
+.sale-policy {
+    padding: 12px 20px;
+    min-width: 290px;
+    background-color: var(--white);
+
+}
+
+.policy-heading {
+    display: flex;
+    color: #53c305;
+    font-size: 1.4rem;
+}
+
+.policy-title {
+    font-size: 1.5rem;
+}
+
+.policy-sub {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 6px 0;
+}
+
+.icon-policy + span {
+    margin-left: 6px;
+}
+
+/* promotion */
+
+.promotion-title {
+    font-size: 1.4rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.promotion-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.promotion-img:hover {
+    transform: scale(1.05)
+}

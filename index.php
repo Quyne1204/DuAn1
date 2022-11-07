@@ -19,8 +19,8 @@ if(isset($_GET['act'])) {
             break;
 
         // Xem giỏ hàng
-        case 'cart':
-            include 'pages/cart.php';
+        case 'viewcart':
+            include 'pages/cart/viewcart.php';
             break;
 
         default:

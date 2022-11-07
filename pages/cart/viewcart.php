@@ -7,7 +7,7 @@
             <div class="show-cart">
                 <table>
                     <tr class="table-body">
-                        <td>Ảnh sản phẩm</td>
+                        <td>Sản phẩm</td>
                         <td>Đơn giá</td>
                         <td>Số lượng</td>
                         <td>Thành tiền</td>

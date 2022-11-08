@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="form-control">
-                    <label class="form-title">Mật khẩu (như trên)</label>
+                    <label class="form-title"> Nhập lại mật khẩu</label>
                     <input class="form-input" type="password" placeholder="Mật khẩu như trên...">
                 </div>
 

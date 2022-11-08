@@ -18,6 +18,9 @@
     object-fit: cover;
 }
 
+.flex{
+    display: flex;
+}
 .detail-item {
     padding: 0 26px;
 }
@@ -57,6 +60,7 @@
     background-color: var(--primary);
     border-color: transparent;
     color: var(--white);
+    margin-right: 15px;
 }
 
 .handel-add-cart {

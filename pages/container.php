@@ -236,95 +236,21 @@
                 <div class="list-product">
 
                     <!-- Item -->
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
-
-                    <a href="" class="product-item">
-                        <div class="inner-item">
-                            <img class="laptop-img" src="https://lh3.googleusercontent.com/UL9bIySZatUyckrYhzv4NV7v9aiOeOUUM5nbkvF_M6jjDF_4ctEcEx2--m8bTZWP74ESzIp6b8GMLMlcM1YzdPw1yM07K0o=w230-rw" alt="">
-                            <p class="inner-name">Laptop Lenovo IdeaPad 5 15ITL05 82FG01H8VN (15.6" Intel Core i5-1135G7/8GB/256GB SSD/Onboard/Windows 11 Home/1.7kg)</p>
-                            <p class="inner-price">13.590.000<span>đ</span></p>
-                            <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
-                        </div>
-                    </a>
+                    <?php
+                        foreach ($list_products as $products) {
+                            extract($products);
+                            echo '
+                                <a href="index.php?act=detail&id_products='.$id_product.'&id_categories='.$type_id.'" class="product-item">
+                                    <div class="inner-item">
+                                        <img class="laptop-img" src="./images/sanpham/'.$img.'" >
+                                        <p class="inner-name">'.$products_name.'</p>
+                                        <p class="inner-price">'.$money.'</p>
+                                        <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
+                                    </div>
+                                </a>
+                            ';
+                        }
+                    ?>
 
                 </div>
             </div>

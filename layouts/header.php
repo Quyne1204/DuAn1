@@ -162,7 +162,10 @@
                             <p>Giỏ hàng của bạn</p>
 
                             <!-- Số lượng giỏ hàng -->
-                            <p>(0) sản phẩm</p>
+                            <?php
+                            $n = count($_SESSION['mycart']);
+                            echo '<p>('.$n.') sản phẩm</p>';
+                            ?>
                         </div>
 
                         <div class="cart-list">
@@ -170,32 +173,22 @@
 
                             <div class="cart-item">
                                 <!-- thông tin item trong giỏ hàng -->
-                                <div class="item-note">
-                                    <img class="cart-img" src="https://lh3.googleusercontent.com/J7o9N1AtcaJVNPyXkmwygEDETKs4SpOkjfYwz8QSZdJL7fp-UqhWb9MUfir49STtizblCdgB5GLZ0q9BWg=rw" alt="">
-                                    <div class="cart-item-note">
-                                        <p class="name-item">Android Tivi Sharp 32 inch 2T-C32BG1X</p>
-                                        <p class="number">Số lương: 1</p>
-                                        <p class="price">4.890.000<span>đ</span></p>
+                                <?php
+                                foreach ($_SESSION['mycart'] as $cart) {
+                                echo'
+                                    <div class="item-note">
+                                        <img class="cart-img" src="images/sanpham/'.$cart[2].'">
+                                        <div class="cart-item-note">
+                                            <p class="name-item">'.$cart[1].'</p>
+                                            <p class="number">Số lương: 1</p>
+                                            <p class="price">'.$cart[3].'<span>đ</span></p>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="item-note">
-                                    <img class="cart-img" src="https://lh3.googleusercontent.com/J7o9N1AtcaJVNPyXkmwygEDETKs4SpOkjfYwz8QSZdJL7fp-UqhWb9MUfir49STtizblCdgB5GLZ0q9BWg=rw" alt="">
-                                    <div class="cart-item-note">
-                                        <p class="name-item">Android Tivi Sharp 32 inch 2T-C32BG1X</p>
-                                        <p class="number">Số lương: 1</p>
-                                        <p class="price">4.890.000<span>đ</span></p>
-                                    </div>
-                                </div>
-
-                                <div class="item-note">
-                                    <img class="cart-img" src="https://lh3.googleusercontent.com/J7o9N1AtcaJVNPyXkmwygEDETKs4SpOkjfYwz8QSZdJL7fp-UqhWb9MUfir49STtizblCdgB5GLZ0q9BWg=rw" alt="">
-                                    <div class="cart-item-note">
-                                        <p class="name-item">Android Tivi Sharp 32 inch 2T-C32BG1X</p>
-                                        <p class="number">Số lương: 1</p>
-                                        <p class="price">4.890.000<span>đ</span></p>
-                                    </div>
-                                </div>
+                                ';
+                                    
+                                }
+                                ?>
+                                
 
                             </div>
                             <button class="view-cart" >Xem giỏ hàng</button>

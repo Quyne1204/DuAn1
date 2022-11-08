@@ -58,10 +58,10 @@
                 echo '
                     <h6 class="cart-pay-title">Thanh toán</h6>
                     <div class="sum">
-                        <figcaption>Tổng tạm tính</figcaption><span>'.$totalize.'</span>
+                        <figcaption>Tổng tạm tính</figcaption><span>'.$totalize.' <span>đ</span></span>
                     </div>
                     <div class="money">
-                        <figcaption>Thành tiền</figcaption><span>'.$totalize.'</span>
+                        <figcaption>Thành tiền</figcaption><span>'.$totalize.' <span>đ</span></span>
                     </div>
                     <button class="handel-pay ">Thanh toán</button>
                     ';

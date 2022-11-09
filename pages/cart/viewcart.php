@@ -63,7 +63,7 @@
                     <div class="money">
                         <figcaption>Thành tiền</figcaption><span>'.$totalize.' <span>đ</span></span>
                     </div>
-                    <button class="handel-pay ">Thanh toán</button>
+                    <a href="index.php?act=bill"><input type="submit" class="handel-pay" value="Thanh Toán"></input></a>
                     ';
             ?>
             </div>

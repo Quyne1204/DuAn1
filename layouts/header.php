@@ -164,7 +164,7 @@
                             <!-- Số lượng giỏ hàng -->
                             <?php
                             $n = 0;
-                            if(count($_SESSION['mycart'])>0){
+                            if(isset($_SESSION['mycart'])&&count($_SESSION['mycart'])>0){
                                 $n = count($_SESSION['mycart']);
                             }else{
                                 $n = 0;
@@ -180,18 +180,27 @@
                             <div class="cart-item">
                                 <!-- thông tin item trong giỏ hàng -->
                                 <?php
-                                foreach ($_SESSION['mycart'] as $cart) {
-                                echo'
-                                    <div class="item-note">
-                                        <img class="cart-img" src="images/sanpham/'.$cart[2].'">
-                                        <div class="cart-item-note">
-                                            <p class="name-item">'.$cart[1].'</p>
-                                            <p class="number">Số lương: 1</p>
-                                            <p class="price">'.$cart[3].'<span>đ</span></p>
+                                if(isset($_SESSION['mycart'])){
+                                    foreach ($_SESSION['mycart'] as $cart) {
+                                        echo'
+                                            <div class="item-note">
+                                                <img class="cart-img" src="images/sanpham/'.$cart[2].'">
+                                                <div class="cart-item-note">
+                                                    <p class="name-item">'.$cart[1].'</p>
+                                                    <p class="number">Số lương: 1</p>
+                                                    <p class="price">'.$cart[3].'<span>đ</span></p>
+                                                </div>
+                                            </div>
+                                        ';}
+                                }else{
+                                    echo'
+                                        <div class="item-note">
+                                            
+                                            <div class="cart-item-note">
+                                                
+                                            </div>
                                         </div>
-                                    </div>
-                                ';
-                                    
+                                    ';
                                 }
                                 ?>
                                 

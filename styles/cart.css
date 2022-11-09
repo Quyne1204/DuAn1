@@ -11,6 +11,8 @@
     margin: 20px 0;
 }
 
+
+
 .cart-info {
     color: #333;
     font-size: 1.3rem;
@@ -53,7 +55,6 @@
     padding:  20px;
     text-align: center;
 }
-
 .cart-price {
     background-color: #f8f8fc;
 }

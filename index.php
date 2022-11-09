@@ -68,6 +68,9 @@ if(isset($_GET['act'])) {
         case 'viewcart':
             include 'pages/cart/viewcart.php';
             break;
+        case 'bill':
+            include 'pages/cart/bill.php';
+            break;
 
         default:
             include 'pages/container.php';

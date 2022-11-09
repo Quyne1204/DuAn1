@@ -22,11 +22,34 @@ if(isset($_GET['act'])) {
     switch ($act) {
 
         // form
-        case 'form':
+        case 'pages_login':
+            include 'form/login.php';
+            break;
+
+        case 'login':
+            if(isset($_POST['login'])&&($_POST['login'])){
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+                $login = user_login($email,$password);
+                if(is_array($login)){
+                    $_SESSION['user'] = $login;
+                }else{
+                    $tb="Thông tin đăng nhập không đúng hoặc tài khoản chưa được đăng ký";
+                }
+                
+            }
             include 'form/login.php';
             break;
 
         case 'signup':
+            if(isset($_POST['signup'])&&($_POST['signup'])){
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+                user_insert($password,$email);
+            }
+
             include 'form/signup.php';
             break;
 
@@ -64,6 +87,34 @@ if(isset($_GET['act'])) {
                 $_SESSION['mycart']=[];
             }
             include 'pages/cart/viewcart.php';
+            break;
+
+        //bill detail
+        case 'bill_detail':
+            if(isset($_POST['pay'])&&($_POST['pay'])){
+                if(isset($_SESSION['user'])){ 
+                     $user_id=$_SESSION['user']['id_user'];
+                }else{
+                     $user_id = 0;
+                }
+                $full_name = $_POST['full_name'];
+                $address = $_POST['address'];
+                $phone_number = $_POST['phone_number'];
+                $email = $_POST['email'];
+                $date = date("y-m-d",time());
+                $total_cart= total_cart();
+                $bill_pay = $_POST['bill_pay'];
+
+                $id_bill = insert_bill($user_id,$full_name,$address,$phone_number,$email,$bill_pay,$date,$total_cart);
+
+                foreach($_SESSION['mycart'] as $cart){
+                    insert_cart($_SESSION['user']['id_user'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$id_bill);
+                }
+                $_SESSION['mycart']=[];
+            }
+            $list_bill = loadone_bill($id_bill);
+            $detail_bill = loadall_cart($id_bill);
+            include 'pages/cart/bill_detail.php';
             break;
         case 'viewcart':
             include 'pages/cart/viewcart.php';

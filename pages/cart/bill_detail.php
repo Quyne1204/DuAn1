@@ -1,8 +1,8 @@
 <section>
 
     <div style="width: 1232px; margin:0 auto;">
-        <h2 class="cart-heading">Thanh Toán</h2>
-        <form action="index.php?act=bill_detail" method="POST">
+        <h2 class="cart-heading">Hóa đơn của bạn</h2>
+        <form action="">
         <div class="cart-body">
             <div class="show-cart">
                 <table>
@@ -21,29 +21,25 @@
                     ?>
                     <tr class="table-body">
                         <td width="200px">Họ Tên người nhận</td>
-                        <td width="550px"><input style="border:1px solid white;width:400px;height:30px;padding:10px" 
-                                value="<?=$full_name?>" name="full_name" placeholder="Nhập..." type="text"></td>
+                        <td width="550px"><?=$full_name?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Email </td>
-                        <td width="550px"><input style="border:1px solid white;width:400px;height:30px;padding:10px" 
-                                value="<?=$email?>" name="email" placeholder="Nhập..." type="text"></td>
+                        <td width="550px"><?=$email?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Số điện thoại </td>
-                        <td width="550px"><input style="border:1px solid white;width:400px;height:30px;padding:10px" 
-                                value="<?=$phone_number?>" name="phone_number" placeholder="Nhập..." type="text"></td>
+                        <td width="550px"><?=$phone_number?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Địa chỉ </td>
-                        <td width="550px"><input style="border:1px solid white;width:400px;height:30px;padding:10px" 
-                                value="<?=$address?>" name="address" placeholder="Nhập..." type="text"></td>
+                        <td width="550px"><?=$address?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Phương thức thanh toán </td>
                         <td width="550px">
-                            <input type="radio" name="bill_pay" value="Trả tiền khi nhận hàng" checked>Trả tiền khi nhận hàng 
-                            <input style="margin-left:20px" type="radio" name="bill_pay" value="Thanh toán Online" >Thanh toán Online
+                            <?php
+                            ?>
                         </td>
                         
                     </tr>
@@ -104,7 +100,7 @@
                     <div class="money">
                         <figcaption>Thành tiền</figcaption><span>'.$totalize.' <span>đ</span></span>
                     </div>
-                    <a href="index.php?act=bill_detail"><input type="submit" name="pay" class="handel-pay" value="Thanh Toán"></input></a>
+                    <a href="index.php?act=bill"><input type="submit" class="handel-pay" value="Thanh Toán"></input></a>
                     ';
             ?>
             </div>

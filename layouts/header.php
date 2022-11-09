@@ -163,7 +163,13 @@
 
                             <!-- Số lượng giỏ hàng -->
                             <?php
-                            $n = count($_SESSION['mycart']);
+                            $n = 0;
+                            if(count($_SESSION['mycart'])>0){
+                                $n = count($_SESSION['mycart']);
+                            }else{
+                                $n = 0;
+                            }
+                            
                             echo '<p>('.$n.') sản phẩm</p>';
                             ?>
                         </div>

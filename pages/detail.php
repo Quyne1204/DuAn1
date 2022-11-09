@@ -24,8 +24,9 @@
                                         <input type="hidden" name="name" value="'.$products_name.'">
                                         <input type="hidden" name="img" value="'.$img.'">
                                         <input type="hidden" name="money" value="'.$money.'">
-                                        <div class="flex">
-                                            <input class="handel-buy" value="Mua ngay">
+                                        <div class="flex" >
+                                            <input name="addtocart" type="submit" class="handel-buy" 
+                                                    value="Mua ngay">
                                             <input name="addtocart" type="submit" class="handel-add-cart" 
                                                     value="Thêm Vào Giỏ Hàng">
                                         </div>

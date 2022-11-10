@@ -7,40 +7,37 @@
             <div class="show-cart">
                 <table>
                     <?php
-                        if(isset($_SESSION['user'])){
-                            $full_name = $_SESSION['user']['full_name'];
-                            $address = $_SESSION['user']['address'];
-                            $phone_number = $_SESSION['user']['phone_number'];
-                            $email = $_SESSION['user']['email'];
-                        }else{
-                            $full_name = "";
-                            $address = "";
-                            $email = "";
-                            $phone_number = "";
+                        if(isset($list_bill)&&is_array($list_bill)){
+                            extract($list_bill);
                         }
                     ?>
                     <tr class="table-body">
+                        <td width="200px">Mã đơn hàng</td>
+                        <td width="550px">DHS-<?=$list_bill['id_bill']?></td>
+                    </tr>
+                    <tr class="table-body">
+                        <td width="200px">Ngày đặt hàng</td>
+                        <td width="550px"><?=$list_bill['date']?></td>
+                    </tr>
+                    <tr class="table-body">
                         <td width="200px">Họ Tên người nhận</td>
-                        <td width="550px"><?=$full_name?></td>
+                        <td width="550px"><?=$list_bill['name']?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Email </td>
-                        <td width="550px"><?=$email?></td>
+                        <td width="550px"><?=$list_bill['email']?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Số điện thoại </td>
-                        <td width="550px"><?=$phone_number?></td>
+                        <td width="550px"><?=$list_bill['phone']?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Địa chỉ </td>
-                        <td width="550px"><?=$address?></td>
+                        <td width="550px"><?=$list_bill['address']?></td>
                     </tr>
                     <tr class="table-body">
                         <td width="200px">Phương thức thanh toán </td>
-                        <td width="550px">
-                            <?php
-                            ?>
-                        </td>
+                        <td width="550px"><?=$list_bill['bill_pay']?></td>
                         
                     </tr>
             
@@ -60,49 +57,41 @@
                         </tr>
                         <?php
                         $totalize = 0;
-                        $n = 0;
-                        foreach ($_SESSION['mycart'] as $cart) {
-                            $totalize += $cart[5];
-                            $delete_cart = '<a style="color:blue" href="index.php?act=delete_cart&id='.$n.'">Xóa</a>' ;
+                        foreach ($detail_bill as $cart) {
+                            extract($cart);
+                            $totalize += $total;
                             echo ' 
                                 <tr class="table-body">
                                     <td>
                                         <div class="cart-place">
-                                            <img class="cart-img" src="images//sanpham/'.$cart[2].'">
-                                            <span >'.$cart[1].'</span>
+                                            <img class="cart-img" src="images//sanpham/'.$images.'">
+                                            <span >'.$product_name.'</span>
                                         </div>
                                     </td>
                                     <td >
-                                        <p >'.$cart[3].'<span>đ</span></p>
+                                        <p >'.$money.'<span>đ</span></p>
                                     </td>
                 
                                     <td  style="font-weight:bold">
-                                        '.$cart[4].'
+                                        '.$count.'
                                     </td>
                 
-                                    <td  style="font-weight:bold">'.$cart[5].' <span>đ</span></td>
+                                    <td  style="font-weight:bold">'.$total.' <span>đ</span></td>
                 
                                 </tr> 
                                 
                             ';
-                            $n +=1;
                         }?>
                     </table>
                 </div>
-
-
                 <?php
                 echo '
-                    <h6 class="cart-pay-title">Thanh toán</h6>
-                    <div class="sum">
-                        <figcaption>Tổng tạm tính</figcaption><span>'.$totalize.' <span>đ</span></span>
-                    </div>
                     <div class="money">
-                        <figcaption>Thành tiền</figcaption><span>'.$totalize.' <span>đ</span></span>
-                    </div>
-                    <a href="index.php?act=bill"><input type="submit" class="handel-pay" value="Thanh Toán"></input></a>
-                    ';
+                        <figcaption><h6 class="cart-pay-title"> Tổng Thanh Toán</h6></figcaption><span>'.$totalize.' <span>đ</span></span>
+                    </div>                    
+                ';
             ?>
+
             </div>
     
             

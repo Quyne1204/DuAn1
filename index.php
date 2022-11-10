@@ -13,6 +13,7 @@ include 'model/bill.php';
     if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
 
     $list_products = load_products_home();
+    $list_dm = loadall_danhmuc();
 
 
 if(isset($_GET['act'])) {
@@ -105,7 +106,7 @@ if(isset($_GET['act'])) {
                 $total_cart= total_cart();
                 $bill_pay = $_POST['bill_pay'];
 
-                $id_bill = insert_bill($user_id,$full_name,$address,$phone_number,$email,$bill_pay,$date,$total_cart);
+                $id_bill = insert_bill($user_id,$full_name,$address,$phone_number,$email,$date,$total_cart,$bill_pay);
 
                 foreach($_SESSION['mycart'] as $cart){
                     insert_cart($_SESSION['user']['id_user'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$id_bill);

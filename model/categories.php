@@ -8,8 +8,8 @@
         pdo_execute($sql);
     }
     function loadall_danhmuc(){
-        $sql="select * from categories order by id_type desc";
-        $listdanhmuc=pdo_query($sql);
+        $sql="select * from categories";
+        $listdanhmuc = pdo_query($sql);
         return $listdanhmuc;
     }
     function loadone_danhmuc($id){

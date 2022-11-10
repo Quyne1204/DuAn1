@@ -43,7 +43,7 @@
                         <td width="200px">Phương thức thanh toán </td>
                         <td width="550px">
                             <input type="radio" name="bill_pay" value="Trả tiền khi nhận hàng" checked>Trả tiền khi nhận hàng 
-                            <input style="margin-left:20px" type="radio" name="bill_pay" value="Thanh toán Online" >Thanh toán Online
+                            <input type="radio" name="bill_pay" value="Thanh toán Online"  style="margin-left:20px">Thanh toán Online
                         </td>
                         
                     </tr>

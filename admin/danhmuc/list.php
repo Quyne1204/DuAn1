@@ -17,12 +17,12 @@
                             $suadm="index.php?act=suadm&id_type=".$id_type;
                             $xoadm="index.php?act=xoadm&id_type=".$id_type;
                             echo '<tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>'.$id_type.'</td>
-                            <td>'.$type_name.'</td>
-                            <td> <a href="'.$suadm.'"><input type="button" value="Sửa">  </a>
-                            <a href="'.$xoadm.'"><input type="button" value="Xóa"></td> </a>
-                        </tr>';
+                                    <td><input type="checkbox" name="" id=""></td>
+                                    <td>'.$id_type.'</td>
+                                    <td>'.$type_name.'</td>
+                                    <td> <a href="'.$suadm.'"><input type="button" value="Sửa">  </a>
+                                    <a href="'.$xoadm.'"><input type="button" value="Xóa"></td> </a>
+                                </tr>';
                         }
                          ?>
                      

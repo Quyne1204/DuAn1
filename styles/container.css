@@ -118,9 +118,11 @@
 
 .inner-tab {
     position: absolute;
-    display: flex;
-    top: 94px;
-    left: 25%;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    left: 10%;
+    top: 90px;
+    padding: 0 100px;
 }
 
 .inner-item {
@@ -131,8 +133,9 @@
 }
 
 .inner-img {
-    width: 100%;
+    width: 162px;
     transition: 0.3s;
+    object-fit: cover;
 }
 
 .inner-img:hover {
@@ -240,7 +243,7 @@
 
 .list-product {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     gap: 4px;
 }
 

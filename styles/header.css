@@ -4,6 +4,8 @@
 }
 
 .header-sup {
+    display: flex;
+    justify-content: center;
     background-color: var(--primary);
     height: var(--header-height);
 }

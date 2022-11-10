@@ -46,7 +46,7 @@
                 ';
                 $n +=1;
             }?>
-                <tr>
+                <tr style="margin-top:12px; background-color:#fff; padding: 4px 24px; text-align:center;">
                     <td><a style="color:blue" href="index.php">Mua tiếp</a></td>
                     <td><a style="color:blue" href="index.php?act=delete_cart">Xóa tất cả</a></td>
                 </tr>

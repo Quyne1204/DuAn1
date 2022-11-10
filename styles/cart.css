@@ -52,6 +52,7 @@
 }
 
 .table-body > td {
+    background-color: #fff;
     padding:  20px;
     text-align: center;
 }

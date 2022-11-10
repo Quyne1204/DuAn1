@@ -68,12 +68,13 @@
     border-color: var(--primary);
 }
 
-.handel-add-cart,.handel-buy { 
+.handel-add-cart,.handel-buy {
     width: 200px;
     border-radius: 8px;
     padding: 13px;
     font-size: 1.4rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 

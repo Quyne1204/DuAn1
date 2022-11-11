@@ -35,10 +35,11 @@ if(isset($_GET['act'])) {
                 $login = user_login($email,$password);
                 if(is_array($login)){
                     $_SESSION['user'] = $login;
+                    header("Location: index.php");
+                    
                 }else{
                     $tb="Thông tin đăng nhập không đúng hoặc tài khoản chưa được đăng ký";
                 }
-                
             }
             include 'form/login.php';
             break;

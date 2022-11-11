@@ -213,12 +213,13 @@
                     <?php
                         foreach ($list_products as $products) {
                             extract($products);
+                            $price= product_price($money);
                             echo '
                                 <a href="index.php?act=detail&id_products='.$id_product.'&id_categories='.$type_id.'" class="product-item">
                                     <div class="inner-item">
                                         <img class="laptop-img" src="./images/sanpham/'.$img.'" >
                                         <p class="inner-name">'.$products_name.'</p>
-                                        <p class="inner-price">'.$money.'</p>
+                                        <p class="inner-price">'.$price.'</p>
                                         <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
                                     </div>
                                 </a>

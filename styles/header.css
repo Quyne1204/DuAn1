@@ -170,7 +170,6 @@ span + .cart-title {
 .cart-item {
     height: 140px;
     overflow-y: auto;
-    box-shadow: 0 0 3px #ccc;
     border-radius: 4px;
 }
 
@@ -185,6 +184,9 @@ span + .cart-title {
 
 .item-note {
     display: flex;
+    align-items: center;
+    padding: 3px 3px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 20%);
 }
 
 .item-note + .item-note {

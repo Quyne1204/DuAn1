@@ -62,7 +62,34 @@
                             <p class="sale"><del>7.600.000 <span>đ</span></del> <span class="sold">-25.13%</span> </p>
                         </div>
 
-                        
+                        <div class="inner-item">
+                            <img class="inner-img" src="https://lh3.googleusercontent.com/lEwFIR76oQULHedWQg-X5MOUvHPe81POuvuW1UOxphbkC_qZgvqDJF3ACNrKwgH54JDej-1qGvjUaYylU6vLICUi2XBd4MU=w230-rw" alt="">
+                            <p class="inner-name">Màn hình LCD VIEWSONIC VX2718-2KPC-MHD (2560 x 1440/VA/165Hz/1 ms)</p>
+                            <p class="inner-price">5.690.000 <span>đ</span></p>
+                            <p class="sale"><del>7.600.000 <span>đ</span></del> <span class="sold">-25.13%</span> </p>
+                        </div>
+
+                        <div class="inner-item">
+                            <img class="inner-img" src="https://lh3.googleusercontent.com/lEwFIR76oQULHedWQg-X5MOUvHPe81POuvuW1UOxphbkC_qZgvqDJF3ACNrKwgH54JDej-1qGvjUaYylU6vLICUi2XBd4MU=w230-rw" alt="">
+                            <p class="inner-name">Màn hình LCD VIEWSONIC VX2718-2KPC-MHD (2560 x 1440/VA/165Hz/1 ms)</p>
+                            <p class="inner-price">5.690.000 <span>đ</span></p>
+                            <p class="sale"><del>7.600.000 <span>đ</span></del> <span class="sold">-25.13%</span> </p>
+                        </div>
+
+                        <div class="inner-item">
+                            <img class="inner-img" src="https://lh3.googleusercontent.com/lEwFIR76oQULHedWQg-X5MOUvHPe81POuvuW1UOxphbkC_qZgvqDJF3ACNrKwgH54JDej-1qGvjUaYylU6vLICUi2XBd4MU=w230-rw" alt="">
+                            <p class="inner-name">Màn hình LCD VIEWSONIC VX2718-2KPC-MHD (2560 x 1440/VA/165Hz/1 ms)</p>
+                            <p class="inner-price">5.690.000 <span>đ</span></p>
+                            <p class="sale"><del>7.600.000 <span>đ</span></del> <span class="sold">-25.13%</span> </p>
+                        </div>
+
+                        <div class="inner-item">
+                            <img class="inner-img" src="https://lh3.googleusercontent.com/lEwFIR76oQULHedWQg-X5MOUvHPe81POuvuW1UOxphbkC_qZgvqDJF3ACNrKwgH54JDej-1qGvjUaYylU6vLICUi2XBd4MU=w230-rw" alt="">
+                            <p class="inner-name">Màn hình LCD VIEWSONIC VX2718-2KPC-MHD (2560 x 1440/VA/165Hz/1 ms)</p>
+                            <p class="inner-price">5.690.000 <span>đ</span></p>
+                            <p class="sale"><del>7.600.000 <span>đ</span></del> <span class="sold">-25.13%</span> </p>
+                        </div>
+
                     </div>
                 </div>
 
@@ -211,27 +238,30 @@
 
                     <!-- Item -->
                     <?php
-                        function product_price($priceFloat) {
-                            $symbol = 'đ';
-                            $symbol_thousand = '.';
-                            $decimal_place = 0;
-                            $price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
-                            return $price.$symbol;
-                        }
-                        foreach ($list_products as $products) {
-                            extract($products);
-                            $priceFloat = $money;
-                            echo '
-                                <a href="index.php?act=detail&id_products='.$id_product.'&id_categories='.$type_id.'" class="product-item">
+                    function product_price($priceFloat)
+                    {
+                        $symbol = 'đ';
+                        $symbol_thousand = '.';
+                        $decimal_place = 0;
+                        $price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
+                        return $price . $symbol;
+                    }
+                    foreach ($list_products as $products) {
+                        extract($products);
+                        $price = product_price($money);
+                        $priceFloat = $money;
+                        echo '
+                                <a href="index.php?act=detail&id_products=' . $id_product . '&id_categories=' . $type_id . '" class="product-item">
                                     <div class="inner-item">
-                                        <img class="laptop-img" src="./images/sanpham/'.$img.'" >
-                                        <p class="inner-name">'.$products_name.'</p>
-                                        <p class="inner-price">'.product_price($priceFloat).'</p>
+                                        <img class="laptop-img" src="./images/sanpham/' . $img . '" >
+                                        <p class="inner-name">' . $products_name . '</p>
+                                        <p class="inner-price">' . $price . '</p>
+                                        <p class="inner-price">' . product_price($priceFloat) . '</p>
                                         <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
                                     </div>
                                 </a>
                             ';
-                        }
+                    }
                     ?>
 
                 </div>

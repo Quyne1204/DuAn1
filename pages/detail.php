@@ -18,6 +18,14 @@
                         <div style="display: flex; gap: 10px; margin-top: 12px;">
                             <?php
                                     extract($one_products);
+                                    function product_price($priceFloat) {
+                                        $symbol = 'đ';
+                                        $symbol_thousand = '.';
+                                        $decimal_place = 0;
+                                        $price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
+                                        return $price.$symbol;
+                                    }
+                                    $priceFloat = $money;
                                     echo '
                                     <form action="index.php?act=addtocart" method="POST">
                                         <input type="hidden" name="id" value="'.$id_product.'">

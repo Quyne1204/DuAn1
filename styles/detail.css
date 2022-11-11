@@ -69,7 +69,7 @@
 }
 
 .handel-add-cart,.handel-buy {
-    width: 200px;
+    width: 50%;
     border-radius: 8px;
     padding: 13px;
     font-size: 1.4rem;
@@ -81,7 +81,7 @@
 /* Chính sách khách hàng */
 
 .sale-policy {
-    padding: 12px 20px;
+    padding: 12px 12px;
     min-width: 290px;
     background-color: var(--white);
 

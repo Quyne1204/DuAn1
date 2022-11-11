@@ -255,7 +255,7 @@
                                     <div class="inner-item">
                                         <img class="laptop-img" src="./images/sanpham/' . $img . '" >
                                         <p class="inner-name">' . $products_name . '</p>
-                                        <p class="inner-price">' . $price . '</p>
+                                        <p style="display:none;" class="inner-price">' . $price . '</p>
                                         <p class="inner-price">' . product_price($priceFloat) . '</p>
                                         <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
                                     </div>

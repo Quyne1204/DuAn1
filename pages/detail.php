@@ -15,24 +15,15 @@
                     <p class="detail-price">17.990.000 ₫</p>
                     <p class="detail-sale"><del>19.590.000 ₫</del><span class="sale-percent">-8.2%</span></p>
 
-                    <div style="display: flex; gap: 10px; margin-top: 12px; width:100%;">
-                        <?php
-                        extract($one_products);
-                        function product_price($priceFloat)
-                        {
-                            $symbol = 'đ';
-                            $symbol_thousand = '.';
-                            $decimal_place = 0;
-                            $price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
-                            return $price . $symbol;
-                        }
-                        $priceFloat = $money;
-                        echo '
-                                    <form action="index.php?act=addtocart" method="POST" style="width:100%">
-                                        <input type="hidden" name="id" value="' . $id_product . '">
-                                        <input type="hidden" name="name" value="' . $products_name . '">
-                                        <input type="hidden" name="img" value="' . $img . '">
-                                        <input type="hidden" name="money" value="' . $money . '">
+                        <div style="display: flex; gap: 10px; margin-top: 12px;">
+                            <?php
+                                    extract($one_products);
+                                    echo '
+                                    <form action="index.php?act=addtocart" method="POST">
+                                        <input type="hidden" name="id" value="'.$id_product.'">
+                                        <input type="hidden" name="name" value="'.$products_name.'">
+                                        <input type="hidden" name="img" value="'.$img.'">
+                                        <input type="hidden" name="money" value="'.$money.'">
                                         <div class="flex" >
                                             <input name="addtocart" type="submit" class="handel-buy" 
                                                     value="Mua ngay">

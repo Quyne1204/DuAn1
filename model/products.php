@@ -35,16 +35,23 @@
            pdo_execute($sql);
         
     }
-    function loadall_product($kyw="", $iddm=0){
+    function loadall_product($kyw="", $id=0){
         $sql="select * from products where 1";
-        if($kyw !=""){
-            $sql .= " and name_product like '%" .$kyw. "%' ";
-        }
-        if($iddm >0){
-            $sql .= " and iddm = '".$iddm."' ";
+        if($id>0){
+            $sql .= " and type_id = '".$id."' ";
         }
         $sql.=" order by date_added desc";
         $listproduct=pdo_query($sql);
         return $listproduct;
+    }
+    function load_name_type($id){
+        if($id>0){
+            $sql = "select * from categories where id_type=".$id;
+            $dm = pdo_query_one($sql);
+            extract($dm);
+            return $type_name;
+        }else{
+            return "";
+        }
     }
 ?> 

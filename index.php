@@ -22,6 +22,21 @@ if(isset($_GET['act'])) {
 
     switch ($act) {
 
+        case 'danhmuc':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
+            }
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+            }else{
+                $id =  0;
+            }
+            $list_sp = loadall_product($kyw, $id);
+            $name_dm = load_name_type($id);
+            include 'pages/products.php';
+            break;
         // form
         case 'signup':
             if(isset($_POST['signup'])&&($_POST['signup'])){

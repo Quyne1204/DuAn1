@@ -55,16 +55,23 @@
             
             <div class="cart-pay">
             <?php
-                echo '
-                    <h6 class="cart-pay-title">Thanh toán</h6>
-                    <div class="sum">
-                        <figcaption>Tổng tạm tính</figcaption><span>'.$totalize.' <span>đ</span></span>
-                    </div>
-                    <div class="money">
-                        <figcaption>Thành tiền</figcaption><span>'.$totalize.' <span>đ</span></span>
-                    </div>
-                    <a href="index.php?act=bill"><input type="submit" class="handel-pay" value="Thanh Toán"></input></a>
+                if(isset($_SESSION['user'])){
+                    echo '
+                        <h6 class="cart-pay-title">Thanh toán</h6>
+                        <div class="sum">
+                            <figcaption>Tổng tạm tính</figcaption><span>'.$totalize.' <span>đ</span></span>
+                        </div>
+                        <div class="money">
+                            <figcaption>Thành tiền</figcaption><span>'.$totalize.' <span>đ</span></span>
+                        </div>
+                        <a href="index.php?act=bill"><input type="submit" class="handel-pay" value="Thanh Toán"></input></a>
+                        ';
+                }else{
+                    echo '
+                        <h2>Bạn hãy đăng nhập để tiếp tục đặt hàng</h2>
+                        <a href="index.php?act=login" style="color:red">Đăng nhập</input></a>  
                     ';
+                }
             ?>
             </div>
     

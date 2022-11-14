@@ -167,7 +167,7 @@
 
                         <div style="display: flex; gap: 10px; margin-top: 12px;">
                             
-                                    <form action="index.php?act=addtocart" method="POST">
+                                    <form action="index.php?act=addtocart" method="POST" style="width:100%">
                                         <input type="hidden" name="id" value="'.$id_product.'">
                                         <input type="hidden" name="name" value="'.$products_name.'">
                                         <input type="hidden" name="img" value="'.$img.'">

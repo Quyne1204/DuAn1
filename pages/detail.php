@@ -153,7 +153,10 @@
                 extract($one_products);
                 echo '
             <div class="detail">
+                <div>
                 <img class="detail-img" src="images/sanpham/'.$img.'">
+                <h3>'.$detail.'</h3>
+                </div>
 
                 <div class="detail-item">
                     <h1 class="detail-title">'.$products_name.'
@@ -169,10 +172,10 @@
                                         <input type="hidden" name="name" value="'.$products_name.'">
                                         <input type="hidden" name="img" value="'.$img.'">
                                         <input type="hidden" name="money" value="'.$money.'">
-                                        <div class="flex" >
+                                        <div class="flex" style="gap:10px; margin-top:12px " >
                                             <input name="addtocart" type="submit" class="handel-buy" 
                                                     value="Mua ngay">
-                                            <input name="addtocart" type="submit" class="handel-add-cart" 
+                                            <input name="addtocart" type="submit" style="width:200px" class="handel-add-cart" 
                                                     value="Thêm Vào Giỏ Hàng">
                                         </div>
                                     </form>

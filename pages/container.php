@@ -16,9 +16,9 @@
                 </div>
 
                 <!-- Search -->
-                <form method="POST" action="">
+                <form method="POST" action="index.php?act=danhmuc">
                     <div class="search">
-                        <input type="text" placeholder="Nhập từ khóa cần tìm">
+                        <input type="text" name="kyw" placeholder="Nhập từ khóa cần tìm">
                         <button class="handel-search">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

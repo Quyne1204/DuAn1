@@ -127,6 +127,12 @@
     font-size: 1.3rem;
     font-weight: 700;
 }
+.form-act-title{
+    color: #82869e;
+}
+.form_form p {
+    margin-top: 7px;
+}
 
 span + .form-act-title,
 span + .cart-title {

@@ -46,7 +46,6 @@ if(isset($_GET['act'])) {
 
                 user_insert($password,$user_name,$email);
             }
-
             include 'form/signup.php';
             break;
 

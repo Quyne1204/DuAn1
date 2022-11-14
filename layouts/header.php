@@ -72,21 +72,6 @@
 
             <!-- Header action -->
 
-            <div class="header-box">
-                <div class="header-action">
-                    <a href="index.php"><img class="logo" src="https://phongvu.vn/phongvu/logo.svg" /></a>
-
-                    <!-- Category -->
-
-                    <div class="category">
-                        <button class="handel-select">
-                            <svg fill="currentColor" viewBox="0 0 512 512" size="20" class="css-11md2ba" color="currentColor" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                <title></title>
-                                <line x1="88" y1="152" x2="424" y2="152" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line>
-                                <line x1="88" y1="256" x2="424" y2="256" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line>
-                                <line x1="88" y1="360" x2="424" y2="360" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line>
-                            </svg>
-                            <span>Danh mục sản phẩm</span>
-                        </button>
+            
 
                             

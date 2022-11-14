@@ -44,3 +44,17 @@
 .suggest > a {
     color: var(--primary);
 }
+.field{
+    position: relative;
+    width: 100%;
+}
+#eye_close, #eye_opfen{
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}

@@ -1,42 +1,64 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
+
+
+include 'model/categories.php';
+
 // layout Header
 include 'layouts/header.php';
 include 'model/pdo.php';
 include 'model/cart.php';
-include 'model/categories.php';
 include 'model/products.php';
 include 'model/customer.php';
 include 'model/comment.php';
 include 'model/bill.php';
-
-    if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
-
-    $list_products = load_products_home();
-    $list_dm = loadall_danhmuc();
-
-
+$list_products = load_products_home();
+$list_dm = loadall_danhmuc();
 if(isset($_GET['act'])) {
 
     $act = $_GET['act'];
 
     switch ($act) {
 
+        case 'danhmuc':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
+            }
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+            }else{
+                $id =  0;
+            }
+            $list_sp = loadall_product($kyw, $id);
+            $name_dm = load_name_type($id);
+            include 'pages/products.php';
+            break;
         // form
-        case 'pages_login':
-            include 'form/login.php';
+        case 'signup':
+            if(isset($_POST['signup'])&&($_POST['signup'])){
+                $user_name = $_POST['user_name'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+                user_insert($password,$user_name,$email);
+            }
+
+            include 'form/signup.php';
             break;
 
         case 'login':
             if(isset($_POST['login'])&&($_POST['login'])){
-                $email = $_POST['email'];
+                $user_name = $_POST['user_name'];
                 $password = $_POST['password'];
 
-                $login = user_login($email,$password);
+                $login = user_login($user_name,$password);
                 if(is_array($login)){
                     $_SESSION['user'] = $login;
-                    header("Location: index.php");
-                    
+                    echo "<script>window.location.href='index.php';</script>";
                 }else{
                     $tb="Thông tin đăng nhập không đúng hoặc tài khoản chưa được đăng ký";
                 }
@@ -44,15 +66,11 @@ if(isset($_GET['act'])) {
             include 'form/login.php';
             break;
 
-        case 'signup':
-            if(isset($_POST['signup'])&&($_POST['signup'])){
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-
-                user_insert($password,$email);
-            }
-
-            include 'form/signup.php';
+        
+        case 'logout':
+            session_destroy();
+            unset($_SESSION['user']);
+            echo "<script>window.location.href='index.php';</script>";
             break;
 
         //xem detail

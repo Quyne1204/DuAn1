@@ -1,5 +1,4 @@
-<span>Danh mục sản phẩm</span>
-                        </button>
+
                         
                         <div class="model-category">
                             <?php

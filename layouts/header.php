@@ -86,5 +86,7 @@
                                 <line x1="88" y1="256" x2="424" y2="256" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line>
                                 <line x1="88" y1="360" x2="424" y2="360" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line>
                             </svg>
+                            <span>Danh mục sản phẩm</span>
+                        </button>
 
                             

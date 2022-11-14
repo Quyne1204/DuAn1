@@ -150,7 +150,17 @@
         <div class="detail-page">
             <!-- Chi tiết sản phẩm -->
             <?php
+            function product_price($priceFloat)
+            {
+                $symbol = 'đ';
+                $symbol_thousand = '.';
+                $decimal_place = 0;
+                $price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
+                return $price . $symbol;
+            }
                 extract($one_products);
+                $price = product_price($money);
+                $priceFloat = $money;
                 echo '
             <div class="detail">
                 <div>
@@ -162,7 +172,7 @@
                     <h1 class="detail-title">'.$products_name.'
                     </h1>
                     <figcaption class="sub-title">Thương hiệu <span class="detail-mark">ACER</span></figcaption>
-                    <p class="detail-price">'.$money.'</p>
+                    <p class="detail-price">' . product_price($priceFloat) . '</p>
                     <p class="detail-sale"><del>19.590.000 ₫</del><span class="sale-percent">-8.2%</span></p>
 
                         <div style="display: flex; gap: 10px; margin-top: 12px;">

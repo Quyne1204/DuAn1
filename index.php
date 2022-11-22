@@ -57,7 +57,7 @@ if(isset($_GET['act'])) {
                 $login = user_login($user_name,$password);
                 if(is_array($login)){
                     $_SESSION['user'] = $login;
-                    echo "<script>window.location.href='index.php';</script>";
+                    echo "<script>window.location.href='admin/index.php';</script>";
                 }else{
                     $tb="Thông tin đăng nhập không đúng hoặc tài khoản chưa được đăng ký";
                 }

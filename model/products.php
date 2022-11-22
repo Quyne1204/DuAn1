@@ -38,10 +38,10 @@
     function loadall_product($kyw="", $id=0){
         $sql="select * from products where 1";
         if($kyw!=""){
-            $sql .= " and products_name like '%".$kyw."%' ";
+            $sql .= " and products_name like '%".$kyw."%' or id_product like '%".$kyw."%'";
         }
         if($id>0){
-            $sql .= " and type_id = '".$id."' ";
+            $sql .= " and type_id = '".$id."'";
         }
         $sql.=" order by date_added desc";
         $listproduct=pdo_query($sql);

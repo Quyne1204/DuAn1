@@ -9,57 +9,27 @@ if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
             //Thêm danh mục
-        case 'adddm':
-            //kiểm tra xem người dùng có nhấn vào nút add không
-            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $type_name = $_POST['name'];
-                insert_danhmuc($type_name);
-                $thongbao = "Thêm thành công";
-            }
-            include "danhmuc/add.php";
-            break;
-
-            //List danh mục
-        case 'listdm':
+        case 'list_cate':
             $listdanhmuc = loadall_danhmuc();
-            include "danhmuc/list.php";
+            include 'categories/list_cate.php';
             break;
-
-            //Xoá danh mục
-        case 'xoadm';
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                delete_danhmuc($_GET['id']);
+////////San pham/////////////////////////////////////////////////////////////////////////////////////////////////////
+        case 'list_pro':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
             }
-            $sql = "select * from categories order by id_type desc";
-            $listdanhmuc = pdo_query($sql);
-            include "danhmuc/list.php";
-            break;
-
-            //Sửa danh mục
-        case 'suadm';
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $capnhat = loadone_danhmuc($_GET['id']);
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+            }else{
+                $id =  0;
             }
-            include "danhmuc/update.php";
+            $list_dm = loadall_danhmuc();
+            $list_sp = loadall_product($kyw, $id);
+            include 'products/list_pro.php';
             break;
-
-            //Update danh mục
-        case 'updatedm';
-            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $id = $_POST['id'];
-                $name = $_POST['name'];
-                update_danhmuc($id, $name);
-                $thongbao = "Cập nhật thành công";
-            }
-            $sql = "select * from categories order by id_type desc";
-            $listdanhmuc = pdo_query($sql);
-            include "danhmuc/list.php";
-            break;
-
-            /** CONTROLLER CHO SẢN PHẨM */
-
-        case 'addsp':
-            //kiểm tra xem người dùng có nhấn vào nút add không
+        case 'add_pro':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $iddm = $_POST['iddm'];
                 $tensp = $_POST['ten_hh'];
@@ -74,68 +44,38 @@ if (isset($_GET['act'])) {
                 $thongbao = "Thêm thành công";
             }
             $listdanhmuc = loadall_danhmuc();
-            include "sanpham/add.php";
+            include 'products/add.php';
             break;
-            //List sản phẩm
-        case 'listsp':
-            if(isset($_POST['listok']) && ($_POST['listok'])){
-                $kyw=$_POST['kyw'];
-                $iddm=$_POST['iddm'];
+
+        case 'delete_pro':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                sp_delete($_GET['id']);
+            }
+            $sql = "select * from products order by date_added desc";
+            $list_sp = pdo_query($sql);
+            include 'products/list_pro.php';
+            break;
+
+        case 'list_bill':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
             }else{
-                $kyw='';
-                $iddm=0;
+                $kyw = "";
             }
-            $listdanhmuc = loadall_danhmuc();
-            $listsanpham = loadall_product($kyw, $iddm);
-            include "sanpham/list.php";
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+            }else{
+                $id =  0;
+            }
+            $list_dm = loadall_danhmuc();
+            $list_sp = loadall_product($kyw, $id);
+            include 'products/list_pro.php';
             break;
 
-            //Xoá sản phẩm
-        case 'xoasp';
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                delete_product($_GET['id']);
-            }
-            $listsanpham = loadall_product();
-            include "sanpham/list.php";
-            break;
 
-            //Sửa sản phẩm
-        case 'suasp';
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $capnhat = loadone_product($_GET['id']);
-            }
-            $listdanhmuc = loadall_danhmuc();
-            include "sanpham/update.php";
-            break;
-
-            //Update sản phẩm
-        case 'updatesp';
-            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $id = $_POST['id'];
-                $iddm = $_POST['iddm'];
-                $tensp = $_POST['tensp'];
-                $giasp = $_POST['giasp'];
-                $mota = $_POST['mota'];
-                $hinh=$_FILES['hinh']['name'];
-                $target_dir="../upload/";
-                $target_file=$target_dir.basename($_FILES["hinh"]["name"]);
-                move_uploaded_file($_FILES["hinh"]["tmp_name"],$target_file);
-
-                update_sanpham($id,$iddm, $tensp, $giasp, $mota,$hinh);
-                $thongbao = "Cập nhật thành công";
-            }
-            $listdanhmuc = loadall_danhmuc();
-            $listsanpham = loadall_product();
-            
-            include "sanpham/list.php";
-            break;
-        
         default:
-            include "home.php";
             break;
     }
-} else {
-    include "home.php";
 }
 
 include "footer.php";

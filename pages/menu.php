@@ -1,4 +1,4 @@
-<div class="header-box">
+            <div class="header-box">
                 <div class="header-action">
                     <a href="index.php"><img class="logo" src="https://phongvu.vn/phongvu/logo.svg" /></a>
 
@@ -16,7 +16,6 @@
                         </button>
                         <div class="model-category">
                         <?php
-                        
                             foreach ($list_dm as $dm) {
                                 extract($dm);
                                 echo '

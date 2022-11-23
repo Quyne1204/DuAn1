@@ -10,9 +10,39 @@
         return $bill;
     }
     function loadall_bill($id_bill){
-        $sql = "select * from bill where bill_id='$id_bill'";
+        if(isset($id_bill)&&($id_bill != 0)){
+            $sql = "select * from bill where bill_id='$id_bill'";
+        }else{
+            $sql = "select * from bill order by id_bill desc";
+        }
         $bill = pdo_query($sql);
         return $bill;
+    }
+    function loadall_bill_count($id){
+        $sql = "select * from cart where bill_id=".$id;
+        $dsbill = pdo_query($sql);
+        return sizeof($dsbill);
+    }
+    function get_status($n){
+        switch ($n) {
+            case '0':
+                $tt = "Đang tạo đơn hàng";
+                break;
+            case '1':
+                $tt = "Đã xử lý ";
+                break;
+            case '2':
+                $tt = "Đang giao hàng ";
+                break;
+            case '3':
+                $tt = "Giao hàng thành công";
+                break;
+            
+            default:
+                $tt = "Đang tạo đơn hàng";
+                break;
+        }
+        return $tt;
     }
         
     

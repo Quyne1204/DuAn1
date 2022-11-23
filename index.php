@@ -3,7 +3,6 @@ session_start();
 
 if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
 
-
 include 'model/categories.php';
 
 // layout Header

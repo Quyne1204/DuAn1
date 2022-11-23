@@ -48,7 +48,7 @@
             <?php
                 foreach ($list_sp as $sanpham) {
                     extract($sanpham);
-                    $update_pro="index.php?act=update_pro&id=".$id_product;
+                    $update_pro="index.php?act=update_pros&id=".$id_product;
                     $delete_pro="index.php?act=delete_pro&id=".$id_product;
                     echo '
                         <tr>

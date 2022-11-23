@@ -38,7 +38,7 @@
                 </div>
                 <div class="box-item item">
                     <h4 for="">MÔ TẢ</h4> <br>
-                    <textarea name="mo_ta" id="hanghoa" required ><?php echo $detail ?></textarea>
+                    <textarea name="mo_ta" id="hanghoa" required><?php echo $detail ?></textarea>
                     <span class="focus-boder"></span>
                 </div>
                 <div class="box-item item">

@@ -1,6 +1,6 @@
 <main>
     <div class="quanly">
-        <form action="index.php?act=add_pro" method="post" enctype="multipart/form-data">
+        <form action="index.php?act=add_bill" method="post" enctype="multipart/form-data">
             <div class="box-quanly">
                 <div class="box-item item">
                     <h4 for="">DANH MỤC</h4> <br>

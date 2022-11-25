@@ -125,3 +125,23 @@
 .promotion-img:hover {
     transform: scale(1.05)
 }
+.cart-num{
+    width: 200px;
+    height: 30px;
+}
+.sluong{
+    width: 100px;
+    font-size: 25px;    
+    border: none;
+    border-radius: 200px;
+    text-align: center;
+    background-color:red ;
+}
+.luong{
+    width: 100px;
+    font-size: 25px;    
+    border: 2px solid blue;
+    border-radius: 20px;
+    text-align: center;
+    background-color:white;
+}

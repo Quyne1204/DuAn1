@@ -17,5 +17,13 @@
     }
     return $totalize;
     }
+    function total_cart1(){
+        $totalize = 0;
+        foreach ($_SESSION['admincart'] as $cart) {
+            $total = $cart[3] * $cart[4];
+            $totalize += $total;
+    }
+    return $totalize;
+    }
     
 ?>

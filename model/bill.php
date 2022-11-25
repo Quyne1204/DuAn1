@@ -23,6 +23,11 @@
         $dsbill = pdo_query($sql);
         return sizeof($dsbill);
     }
+    
+    function bill_update($id, $ttdh){
+        $sql = "update bill set status=$ttdh where id_bill=".$id;
+        pdo_execute($sql);
+    }
     function get_status($n){
         switch ($n) {
             case '0':

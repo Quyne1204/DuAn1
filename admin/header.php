@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/comment.css">
     
     <link rel="stylesheet" href="../styles/admin/loaihang.css">
     <link rel="stylesheet" href="../styles/admin/hanghoa.css">
+    <link rel="stylesheet" href="css/cart.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -19,7 +21,7 @@
 
     <div class="feftt">
         <div class="Top">
-            <h1>G-Computer</h1>
+            <h1 style="color:red">G-Computer</h1>
         </div>
 
         <div class="admin">

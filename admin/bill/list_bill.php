@@ -1,4 +1,9 @@
 <div class="list">
+    <div class="cot4">
+        <div class="dropdown">
+            <a href="index.php?act=add_bill" ><input class="dropbtn adc" type="button" value="Thêm mới"></a>
+        </div>
+    </div>
     <div class="category">
         <table>
             <tr>
@@ -24,7 +29,7 @@
                         <td>'.$date.'</td>
                         <td>'.$status.'</td>
                         <td>
-                            <a href="" style="margin-right:20px">
+                            <a href="index.php?act=update_bill&id='.$id_bill.'" style="margin-right:20px">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"

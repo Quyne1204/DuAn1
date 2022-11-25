@@ -134,6 +134,7 @@
     <script src="javascript/active.js"></script>
     <script src="javascript/base.js"></script>
     <script src="javascript/eye.js"></script>
+    <script src="javascript/count.js"></script>
     </body>
 
     </html>

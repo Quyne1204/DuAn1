@@ -10,9 +10,9 @@
 
                 <div class="form-control">
                     <label class="form-title">Email</label>
-                    <input class="form-input" type="email" name="email" placeholder="Email..." required>
+                    <input class="form-input" type="email" name="email" placeholder="Email..." >
                 </div>
-
+                <input class="form-input" type="hidden" name="role" value="2">
                 <div class="form-control">
                     <label class="form-title">Tài khoản</label>
                     <input class="form-input" type="text" name="user_name" placeholder="Tài khoản..." required>
@@ -36,6 +36,14 @@
                 <input type="submit" class="handel-submit" name="signup" value="Đăng ký">
 
                 <p class="suggest">Nếu Bạn đã có tài khoản ? <a href="index.php?act=login">Đăng nhập</a></p>
+                <span style="color:red;">
+                    <?php
+                        if(isset($tb)&&($tb!="")){
+                            echo $tb;
+                            echo '<br><br>';
+                        }
+                    ?>
+                </span>
 
             </div>
 

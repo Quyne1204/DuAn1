@@ -56,8 +56,8 @@
                     <div class="promotion">
                         <h2 class="promotion-title">Khuyến mãi liên quan</h2>
 
-                        <a href=""><img class="promotion-img" src="https://cdn-vn.pushdy.com/_uploads/phongvu_live_teko/9bd679fe67534ec4a3f5e287d8c916a5.png" alt=""></a>
-                        <a href=""><img class="promotion-img" src="https://cdn-vn.pushdy.com/_uploads/phongvu_live_teko/d0f35b20de044e868b73b810b5383cf8.png" alt=""></a>
+                        <a href=""><img class="promotion-img" src="images/logo/img16.png" alt=""></a>
+                        <a href=""><img class="promotion-img" src="images/logo/img17.png" alt=""></a>
                     </div>
                 </div>
 

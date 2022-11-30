@@ -13,7 +13,7 @@ include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
-            //Thêm danh mục
+////////danh mục////////////////////////////////////////////////////////////////////////////////////////
         case 'list_cate':
             $listdanhmuc = loadall_danhmuc();
             include 'categories/list_cate.php';

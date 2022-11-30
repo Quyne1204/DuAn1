@@ -43,7 +43,7 @@
                 <th width="2%">Giá</th>
                 <th width="6%">Ngày Nhập</th>
                 <th width="16%">Mô Tả</th>
-                <th width="5%"></th>
+                <th width="5%">Công Cụ</th>
             </tr>
             <?php
                 foreach ($list_sp as $sanpham) {

@@ -96,8 +96,7 @@
                         <div class="pay">
                             <h3 class="pay-title">
                                 Danh sách các ngân hàng thanh toán online</h3>
-
-                            <img src="https://shopfront-cdn.tekoapis.com/static/vnpay_banks.png" alt="">
+                            <img src="images/logo/img15.png" alt="">
                         </div>
                     </div>
 

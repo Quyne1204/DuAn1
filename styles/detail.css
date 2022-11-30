@@ -135,7 +135,9 @@
     border: none;
     border-radius: 200px;
     text-align: center;
-    background-color:red ;
+    background-color:rgb(68, 68, 243) ;
+    color: wheat;
+    padding-bottom: 4px;
 }
 .luong{
     width: 100px;

@@ -12,8 +12,8 @@
                 <th width="14%">Số lượng hàng </th>
                 <th width="15%">Giá trị đơn hàng </th>
                 <th width="14%">Ngày đặt hàng </th>
-                <th width="24%">Tình trạng</th>
-                <th></th>
+                <th width="20%">Tình trạng</th>
+                <th>Công cụ</th>
             </tr>
             <?php
                 foreach ($list_bill as $bill) {

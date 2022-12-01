@@ -15,7 +15,38 @@ if (isset($_GET['act'])) {
     switch ($act) {
 ////////danh mục////////////////////////////////////////////////////////////////////////////////////////
         case 'list_cate':
-            $listdanhmuc = loadall_danhmuc();
+            $list_dm = loadall_danhmuc();
+            include 'categories/list_cate.php';
+            break;
+        case 'add_dm':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tendm = $_POST['ten_hh'];
+                insert_danhmuc($tendm);
+                $thongbao = "Thêm thành công";
+            }
+            include 'categories/add.php';
+            break;
+        case 'delete_dm':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                delete_danhmuc($_GET['id']);
+            }
+            $list_dm = loadall_danhmuc();
+            include 'categories/list_cate.php';
+            break;
+        case 'update':
+            if(isset($_GET['id'])&&($_GET['id'])){
+                $categories = loadone_danhmuc($_GET['id']); 
+            }
+            include 'categories/update_dm.php';
+            break;
+        case 'update_dm':
+            if (isset($_POST['update']) && ($_POST['update'])) {
+                $iddm = $_POST['iddm'];
+                $tendm = $_POST['ten_hh'];
+                update_danhmuc($iddm, $tendm);
+                $thongbao = "Sửa thành công";
+            }
+            $list_dm = loadall_danhmuc();
             include 'categories/list_cate.php';
             break;
             

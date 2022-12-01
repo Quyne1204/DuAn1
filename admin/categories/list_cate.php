@@ -1,31 +1,28 @@
 <div class="list">
+<div class="cot4">
+        <div class="dropdown">
+            <a href="index.php?act=add_dm" ><input class="dropbtn adc" type="button" value="Thêm mới"></a>
+        </div>
+    </div>
 
     <div class="category">
         <table>
             <tr>
-                <th width="4%">Mã Sp</th>
-                <th width="8%">Tên Sp</th>
-                <th width="1%"> Ảnh</th>
-                <th width="2%">Giá</th>
-                <th width="6%">Ngày Nhập</th>
-                <th width="16%">Mô Tả</th>
+                <th width="4%">Mã Dm</th>
+                <th width="8%">Tên Danh Mục</th>
                 <th width="5%">Công Cụ</th>
             </tr>
             <?php
-                foreach ($list_danhmuc as $sanpham) {
-                    extract($sanpham);
-                    $update_pro="index.php?act=update_pros&id=".$id_product;
-                    $delete_pro="index.php?act=delete_pro&id=".$id_product;
+                foreach ($list_dm as $dm) {
+                    extract($dm);
+                    $update_dm="index.php?act=update&id=".$id_type;
+                    $delete_dm="index.php?act=delete_dm&id=".$id_type;
                     echo '
                         <tr>
-                            <td>Sp-'.$id_product.'</td>
-                            <td>'.$products_name.'</td>
-                            <td><img width="150px" style="padding-bottom:20px" src="../images/sanpham/'.$img.'"></td>
-                            <td>'.$money.'</td>
-                            <td>'.$date_added.'</td>
-                            <td>'.$detail.'</td>
+                            <td>Dm-'.$id_type.'</td>
+                            <td>'.$type_name.'</td>
                             <td>
-                                <a href="'.$update_pro.'" style="margin-right:10px">
+                                <a href="'.$update_dm.'" style="margin-right:10px">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -34,7 +31,7 @@
                                             d="M4.867 19.125h.008v.008h-.008v-.008z" />
                                     </svg>
                                 </a>
-                                <a href="'.$delete_pro.'">
+                                <a href="'.$delete_dm.'">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"

@@ -15,6 +15,7 @@ include 'model/comment.php';
 include 'model/bill.php';
 $list_products = load_products_home();
 $list_dm = loadall_danhmuc();
+$list_dmm = loadall_danhmucc();
 
 if(isset($_GET['act'])) {
 

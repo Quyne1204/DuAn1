@@ -12,6 +12,11 @@
         $listdanhmuc = pdo_query($sql);
         return $listdanhmuc;
     }
+    function loadall_danhmucc(){
+        $sql="select * from categories order by id_type asc limit 0,4 ";
+        $listdanhmuc = pdo_query($sql);
+        return $listdanhmuc;
+    }
     function loadone_danhmuc($id){
         $sql="select * from categories where id_type=" .$id;
         $dm = pdo_query_one($sql);

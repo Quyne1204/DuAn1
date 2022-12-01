@@ -48,32 +48,20 @@
 
                 <div class="trade-mark">
                     <!-- Asus -->
-                    <div class="mark-item">
-                        <!-- Link đến loại máy tính như hình -->
-                        <a href="#asus" class="mark-link"><img class="mark-img" src="images/logo/img11.webp" alt=""></a>
-                        <figcaption class="mark-name">Asus</figcaption>
-                    </div>
+                    <?php
+                        foreach ($list_dmm as $dm) {
+                            extract($dm);
+                            echo '
+                            <div class="mark-item">
+                                <!-- Link đến loại máy tính như hình -->
+                                <a href="index.php?act=danhmuc&id='.$id_type.'" class="mark-link"><img class="mark-img" src="images/logo/'.$img.'" alt=""></a>
+                                <figcaption class="mark-name">'.$type_name.'</figcaption>
+                            </div>';
+                        }
+                    ?>
+                    
 
-                    <!-- Lenovo -->
-                    <div class="mark-item">
-                        <!-- Link đến loại máy tính như hình -->
-                        <a href="#lenovo" class="mark-link"><img class="mark-img" src="images/logo/img12.webp" alt=""></a>
-                        <figcaption class="mark-name">Lenovo</figcaption>
-                    </div>
-
-                    <!-- Acer -->
-                    <div class="mark-item">
-                        <!-- Link đến loại máy tính như hình -->
-                        <a href="#acer" class="mark-link"><img class="mark-img" src="images/logo/img13.jpg" alt=""></a>
-                        <figcaption class="mark-name">Acer</figcaption>
-                    </div>
-
-                    <!-- HP -->
-                    <div class="mark-item">
-                        <!-- Link đến loại máy tính như hình -->
-                        <a href="#hp" class="mark-link"><img class="mark-img" src="images/logo/img14.webp" alt=""></a>
-                        <figcaption class="mark-name">HP</figcaption>
-                    </div>
+                    
                 </div>
             </div>
 

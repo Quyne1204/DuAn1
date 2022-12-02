@@ -3,7 +3,6 @@ session_start();
 
 if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
 
-
 include 'model/categories.php';
 
 // layout Header
@@ -16,6 +15,8 @@ include 'model/comment.php';
 include 'model/bill.php';
 $list_products = load_products_home();
 $list_dm = loadall_danhmuc();
+$list_dmm = loadall_danhmucc();
+
 if(isset($_GET['act'])) {
 
     $act = $_GET['act'];
@@ -43,8 +44,10 @@ if(isset($_GET['act'])) {
                 $user_name = $_POST['user_name'];
                 $email = $_POST['email'];
                 $password = $_POST['password'];
+                $role = $_POST['role'];
 
-                user_insert($password,$user_name,$email);
+                user_insert($password,$user_name,$email,$role);
+                $tb="Đăng ký thành công";
             }
             include 'form/signup.php';
             break;
@@ -55,8 +58,10 @@ if(isset($_GET['act'])) {
                 $password = $_POST['password'];
 
                 $login = user_login($user_name,$password);
-                if(is_array($login)){
-                    $_SESSION['user'] = $login;
+                $_SESSION['user'] = $login;
+                if(isset($_SESSION['user'])&&($_SESSION['user']['role']==1)){
+                    echo "<script>window.location.href='admin/index.php';</script>";
+                }else if($_SESSION['user']['role']==2){
                     echo "<script>window.location.href='index.php';</script>";
                 }else{
                     $tb="Thông tin đăng nhập không đúng hoặc tài khoản chưa được đăng ký";
@@ -95,7 +100,6 @@ if(isset($_GET['act'])) {
                 $total = $count * $money;
                 $products_add=[$id,$name,$img,$money,$count,$total];
                 array_push($_SESSION['mycart'],$products_add);
-                
             }
             include 'pages/cart/viewcart.php';
             break;

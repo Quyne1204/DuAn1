@@ -32,20 +32,18 @@
                         <td>
                             <p class="cart-price">'.$cart[3].'<span>đ</span></p>
                         </td>
-    
                         <td>
                             <div class="cart-number">
-                                <button>-</button>
-                                <input type="text" value="1">
-                                <button>+</button>
+                                <button onclick="decrement()">-</button>
+                                <input id=demoInput type=number step="1" min=1 max=110 value="1">
+                                <button onclick="increment()">+</button>
                             </div>
                             <button class="handel-delete">'.$delete_cart.'</button>
                         </td>
     
                         <td class="cart-price">'.$cart[5].' <span>đ</span></td>
     
-                    </tr> 
-                    
+                    </tr>
                 ';
                 $n +=1;
             }?>

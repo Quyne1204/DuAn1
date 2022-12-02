@@ -32,28 +32,32 @@
                     <p class="detail-price">' . product_price($priceFloat) . '</p>
                     <p class="detail-sale"><del>19.590.000 ₫</del><span class="sale-percent">-8.2%</span></p>
 
-                        <div style="display: flex; gap: 10px; margin-top: 12px;">
-                            
-                                    <form action="index.php?act=addtocart" method="POST" style="width:100%">
-                                        <input type="hidden" name="id" value="'.$id_product.'">
-                                        <input type="hidden" name="name" value="'.$products_name.'">
-                                        <input type="hidden" name="img" value="'.$img.'">
-                                        <input type="hidden" name="money" value="'.$money.'">
-                                        <div class="flex" style="gap:10px; margin-top:12px " >
-                                            <input name="addtocart" type="submit" class="handel-buy" 
-                                                    value="Mua ngay">
-                                            <input name="addtocart" type="submit" style="width:200px" class="handel-add-cart" 
-                                                    value="Thêm Vào Giỏ Hàng">
-                                        </div>
-                                    </form>
+                        <div style="gap: 10px; margin-top: 12px;">
+                            <div class="cart-num flex" >
+                                <button onclick="decrement()" class="sluong">-</button>
+                                <input class="luong" name="count" id=demoInput type=number step="1" min=1 value="1">
+                                <button onclick="increment()" class="sluong">+</button>
+                            </div>
+                            <form action="index.php?act=addtocart" method="POST" style="width:100%"> 
+                                <input type="hidden" name="id" value="'.$id_product.'">
+                                <input type="hidden" name="name" value="'.$products_name.'">
+                                <input type="hidden" name="img" value="'.$img.'">
+                                <input type="hidden" name="money" value="'.$money.'">
+                                <div class="flex" style="gap:10px; margin-top:12px " >
+                                    <input name="addtocart" type="submit" class="handel-buy" 
+                                            value="Mua ngay">
+                                    <input name="addtocart" type="submit" style="width:200px" class="handel-add-cart" 
+                                            value="Thêm Vào Giỏ Hàng">
+                                </div>
+                            </form>
                                     
                         </div>
 
                     <div class="promotion">
                         <h2 class="promotion-title">Khuyến mãi liên quan</h2>
 
-                        <a href=""><img class="promotion-img" src="https://cdn-vn.pushdy.com/_uploads/phongvu_live_teko/9bd679fe67534ec4a3f5e287d8c916a5.png" alt=""></a>
-                        <a href=""><img class="promotion-img" src="https://cdn-vn.pushdy.com/_uploads/phongvu_live_teko/d0f35b20de044e868b73b810b5383cf8.png" alt=""></a>
+                        <a href=""><img class="promotion-img" src="images/logo/img16.png" alt=""></a>
+                        <a href=""><img class="promotion-img" src="images/logo/img17.png" alt=""></a>
                     </div>
                 </div>
 

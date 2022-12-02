@@ -1,6 +1,6 @@
 <?php
-    function user_insert($password,$user_name,$email){
-        $sql = "insert into customer values(null,'$user_name','$password','','$email','','','0')";
+    function user_insert($password,$user_name,$email,$role){
+        $sql = "insert into customer values(null,'$user_name','$password','','$email','','','$role')";
         pdo_execute($sql);
     }
     function user_login($user_name,$password){

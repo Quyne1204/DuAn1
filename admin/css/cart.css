@@ -1,0 +1,174 @@
+.cart-body {
+    width: var(--header-width);
+    margin: 0 auto;
+    display: flex;
+}
+
+.cart-heading {
+    font-size: 10px;
+    color: #333;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+
+
+.cart-info {
+    color: #333;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.cart-place {
+    display: flex;
+    align-items: center;
+}
+
+.cart-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.cart-name {
+    width: 280px;
+    font-size: 10px;
+    margin-left: 12px;
+}
+
+.cart-price {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.cart-price-del {   
+    font-size: 10px;
+    color: var(--text-color);
+}
+
+.table-body {
+    padding: 12px ;
+    background-color: #fff;
+}
+
+.table-body > td {
+    background-color: #fff;
+    padding:  20px;
+    text-align: center;
+}
+.cart-price {
+    background-color: #f8f8fc;
+}
+
+.cart-number {
+    background-color: #f8f8fc;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.cart-number > input {
+    border: none;
+    outline: none;
+    width: 20px;
+}
+
+.cart-number > button {
+    border: none;
+    width: 40px;
+    height: 20px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    font-size:10px;
+}
+
+.handel-delete {
+    color: var(--primary);
+    border: none;
+    background-color: transparent;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Pay */
+
+.cart-pay {
+    background-color: var(--white);
+    padding: 20px;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-pay-title {
+    margin-top: 12px;
+    font-size: 10px;
+}
+
+.sum,
+.money {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.money > span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.handel-pay {
+    text-transform: uppercase;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 12px 24px;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Pay input */
+
+.cart-item-payed-title {
+    font-size: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.pay-inform {
+    text-align: left !important;
+}
+
+.pay-input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+
+/* base */
+
+.m-l-r-16 {
+    margin: 0 16px;
+}
+
+.sluong{
+    width: 30px;
+    font-size: 15px;    
+    border: none;
+    border-radius: 200px;
+    text-align: center;
+    background-color:red ;
+}
+.luong{ 
+    width: 20px;
+    font-size: 13px;    
+    border: 2px solid blue;
+    border-radius: 20px;
+    text-align: center;
+    background-color:white;
+}

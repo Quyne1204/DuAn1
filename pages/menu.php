@@ -1,6 +1,6 @@
-<div class="header-box">
+            <div class="header-box">
                 <div class="header-action">
-                    <a href="index.php"><img class="logo" src="https://phongvu.vn/phongvu/logo.svg" /></a>
+                    <a href="index.php"><img class="logo" src="images/logo/img18.svg" /></a>
 
                     <!-- Category -->
 
@@ -16,7 +16,6 @@
                         </button>
                         <div class="model-category">
                         <?php
-                        
                             foreach ($list_dm as $dm) {
                                 extract($dm);
                                 echo '
@@ -59,7 +58,7 @@
                             </svg>
                         </span>
                         <div>
-                            <p>Xin Chào</p>
+                            <p>Xin Chào,</p>
                             <p><?=$full_name?></p>
                         </div>
                     </div>

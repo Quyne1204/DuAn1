@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <a href="" style="display: flex;"><img src="https://cdn-vn.pushdy.com/_uploads/phongvu_live_teko/10b7650db1aa4552acb4719d89ddcdcf.png" alt="" width="100%"></a>
+    <a href="" style="display: flex;"><img src="images/logo/img1.png" alt="" width="100%"></a>
     <div>
         <div class="header">
 

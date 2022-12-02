@@ -23,25 +23,26 @@
         $sp=pdo_query_one($sql);
         return $sp;
     }
-    function update_product($id,$iddm, $tensp, $giasp, $mota,$hinh){
-        if($hinh!=""){
-            $sql = " update products set iddm='".$iddm."', name_product='".$tensp."',money='".$giasp."'
-            , mo_ta='".$mota."', img='".$hinh."' where id_product=".$id;
-        }else
-        //$sql="update product set name=?, price=?, mota=? where id=?";
-
-           $sql = " update products set  iddm='".$iddm."', name_product='".$tensp."', money='".$giasp."'
-           , mota='".$mota."' where id_product=".$id;
-           pdo_execute($sql);
+    function update_product($id ,$tensp, $date, $giasp, $name_img, $mo_ta, $iddm){
+        if($name_img!=""){
+            $sql = "update products set type_id='$iddm', products_name='$tensp',money='$giasp',
+                                        detail='$mo_ta', date_added='$date', img='$name_img'
+                                        where id_product='$id' " ;
+        }else{
+            $sql = "update products set type_id='$iddm', products_name='$tensp',money='$giasp',
+                                        detail='$mo_ta', date_added='$date'
+                                        where id_product='$id' " ;
+        }
+        pdo_execute($sql);
         
     }
     function loadall_product($kyw="", $id=0){
         $sql="select * from products where 1";
         if($kyw!=""){
-            $sql .= " and products_name like '%".$kyw."%' ";
+            $sql .= " and products_name like '%".$kyw."%' or id_product like '%".$kyw."%'";
         }
         if($id>0){
-            $sql .= " and type_id = '".$id."' ";
+            $sql .= " and type_id = '".$id."'";
         }
         $sql.=" order by date_added desc";
         $listproduct=pdo_query($sql);

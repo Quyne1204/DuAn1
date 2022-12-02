@@ -26,7 +26,7 @@
                     </svg>
 
                 </div>
-                <span style="color:red;">
+                <span class="er-message" style="color:red;">
                     <?php
                         if(isset($tb)&&($tb!="")){
                             echo $tb;

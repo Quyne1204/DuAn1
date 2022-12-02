@@ -41,10 +41,12 @@
 
 .header-box.active {
     position: fixed;
+    display: flex;
+    align-items: center;
     top: 0;
     left: 0;
     right: 0;
-    height: var(--header-height-action);
+    height: 60px;
     background-color: #fff;
     z-index: 99;
 }
@@ -58,6 +60,7 @@
     justify-content: space-between;
     padding: 0 var(--header-padding-left-right);
     max-width: 100%;
+    transition: 0.4s;
 }
 
 .logo {

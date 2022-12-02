@@ -16,11 +16,7 @@
                             foreach ($listdanhmuc as $danhmuc) {
                                 //extract($danhmuc);
                                 if($iddm==$danhmuc['id']) echo '<option value="'.$danhmuc['id'].'" selected > '.$danhmuc['name'].' </optinon>' ;
-                                else echo '<option value="'.$danhmuc['id'].'"  > '.$danhmuc['name'].' </optinon>' ;
-
-                                
-                                
-                                
+                                else echo '<option value="'.$danhmuc['id'].'"  > '.$danhmuc['name'].' </optinon>' ;                                
                             } ?>
                             
     <div class="quanly">

@@ -3,85 +3,83 @@
     width: var(--header-width);
     margin: 0 auto;
     margin-top: 24px;
+    max-width: 100%;
+}
+
+.wrapper-account {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgb(0 0 0 / 40%);
+    border-radius: 4px;
+    min-height: 330px;
 }
 
 .user-block {
-    width: 300px;
-    margin-right: 12px;
-}
-
-.user-block-item {
     display: flex;
-}
-
-.user-block-item > a {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 12px;
-}
-
-.user-block-item > a:hover {
-    color: var(--primary);
-    font-weight: 600;
-}
-
-#form-update {
-    flex: 1;
-}
-
-.form-update {
-    background-color: #fff;
-    padding: 12px 24px;
-    min-width: 600px;
-}
-
-.form-update > h2 {
-    font-weight: 500;
-}
-
-.form-update-label > label {
-    display: block;
-    margin-bottom: 6px;
-    margin-top: 12px;
-}
-
-.form-update-label > input {
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 12px 12px;
-    outline: none;
-    font-size: 1.6rem;
-}
-
-.address-block {
-    background-color: #fff;
-    max-height: 200px;
-    padding: 12px 24px;
-    margin-left: 12px;
-}
-
-.address-block > h2 {
-    font-weight: 500;
-}
-
-.address-block > p {
-    font-size: 1.4rem;
-    opacity: 0.6;
-}
-
-.handel-put {
-    border: none;
-    background-color: var(--primary);
-    font-size: 1.6rem;
-    padding: 12px 24px;
     color: #fff;
-    margin-top: 12px;
-    border-radius: 4px;
+    padding: 10px 24px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background: linear-gradient(#00B4DB, #0083B0);
 }
 
-.line {
-    margin-top: 20px;
-    border: 1px solid #e0e0e0;
+.user-block img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 50%;
 }
+
+.user-block h3 {
+    font-weight: 500;
+    font-size: 2.6rem;
+    margin: 20px 0;
+}
+
+.user-block p {
+    font-size: 1.4rem;
+}
+
+.info-block {
+    padding: 10px 20px;
+}
+
+.info-block h2 {
+    margin-bottom: 10px;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.information h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.information p {
+    font-size: 1.6rem;
+}
+
+.tab-network {
+    display: flex;
+    margin-top: 20px;
+}
+
+.icon-network {
+    margin-right: 12px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.icon-network:hover {
+    color: #0083B0;
+}
+
 

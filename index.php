@@ -38,7 +38,7 @@ if(isset($_GET['act'])) {
             $name_dm = load_name_type($id);
             include 'pages/products.php';
             break;
-        // form
+        // form//////////////////////////////////////////////////////////////////////////////////////////////
         case 'signup':
             if(isset($_POST['signup'])&&($_POST['signup'])){
                 $user_name = $_POST['user_name'];
@@ -77,7 +77,7 @@ if(isset($_GET['act'])) {
             echo "<script>window.location.href='index.php';</script>";
             break;
 
-        //xem detail
+        //xem detail////////////////////////////////////////////////////////////////////////////////////////
         case 'detail':
             if(isset($_GET['id_products'])&&($_GET['id_products']>0)){
                 $id=$_GET['id_products'];
@@ -89,7 +89,7 @@ if(isset($_GET['act'])) {
             }
             break;
 
-        // Xem giỏ hàng
+        // Xem giỏ hàng//////////////////////////////////////////////////////////////////////////////////////////
         case 'addtocart':
             if(isset($_POST['addtocart'])&&($_POST['addtocart'])){
                 $id = $_POST['id'];
@@ -112,7 +112,7 @@ if(isset($_GET['act'])) {
             include 'pages/cart/viewcart.php';
             break;
 
-        //bill detail
+////////bill detail////////////////////////////////////////////////////////////////////
         case 'bill_detail':
             if(isset($_POST['pay'])&&($_POST['pay'])){
                 if(isset($_SESSION['user'])){ 
@@ -144,6 +144,11 @@ if(isset($_GET['act'])) {
             break;
         case 'bill':
             include 'pages/cart/bill.php';
+            break;
+
+////////khachhang////////////////////////////////////////////////////////////////////////////////////////////
+        case 'acc_detail':
+            include 'pages/account_detail.php';
             break;
 
         default:

@@ -4,6 +4,10 @@
 <section>
 
     <div style="width: 1232px; margin:0 auto;">
+        <div style="text-align:center; margin:20px 0px">
+            <h1>Đặt Hàng Thành Công</h1>
+            <h3>Cảm ơn quý khách đã mua hàng chúc quý khách một ngày tốt lành</h3>
+        </div>
         <h2 class="cart-heading">Hóa đơn của bạn</h2>
         <form action="">
         <div class="cart-body">

@@ -52,6 +52,14 @@ span{
     padding: 15px;
     border-radius: 20px;
 }
+.form-label > select{
+    border: 1px solid #d7dae3;
+    outline: none;
+    width: 400px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 20px;
+}
 
 .form-label > input:focus {
     border-color: var(--primary);
@@ -67,12 +75,11 @@ span{
     cursor: pointer;
 }
 .reset{
+    width: 100px;
     margin-left: 10px;
-    background-color: white;
-    font-size: 20px;
-    padding: 12px 24px;
-    cursor: pointer;
+    background-color: aqua;
+    font-size: 15px;
+    padding: 15px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 80px;
 }

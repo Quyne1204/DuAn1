@@ -75,10 +75,12 @@ if (isset($_GET['act'])) {
                 $giasp = $_POST['don_gia'];
                 $date = $_POST['date'];
                 $mo_ta = $_POST['mo_ta'];
+
                 $name_img = $_FILES['img']['name']; 
                 $target_dir = "../images/sanpham/";
                 $target_file = $target_dir . basename($_FILES["img"]["name"]); 
                 move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+                
                 insert_product($tensp, $date,$giasp, $name_img, $mo_ta, $iddm);
                 $thongbao = "Thêm thành công";
             }
@@ -221,7 +223,51 @@ if (isset($_GET['act'])) {
             include 'customer/list.php';
             break;
         case 'add_cus':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $user_name = $_POST['user_name'];
+                $pass = $_POST['pass'];
+                $full_name = $_POST['full_name'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address']; 
+                $role = $_POST['role']; 
+
+                insert_cus($user_name, $pass,$full_name, $email, $phone,$address, $role);
+                $thongbao = "Thêm thành công";
+            }
+            
+            $list_cus = user_all("",0);
             include 'customer/add.php';
+            break;
+        case 'update_cus':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $user= loadone_cus($_GET['id']);
+            }
+            include 'customer/update.php';
+            break;
+        case 'updatecus':
+            if(isset($_POST['update_cus'])&&($_POST['update_cus'])){
+                $id = $_POST['id'];
+                $user_name = $_POST['user_name'];
+                $pass = $_POST['pass'];
+                $full_name = $_POST['full_name'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address']; 
+                $role = $_POST['role']; 
+
+                $update = update_cus($id,$user_name, $pass,$full_name, $email, $phone,$address, $role);
+                $thongbao = "Update thành công";
+                $list_cus = user_all("",0);
+            }
+            include 'customer/list.php';
+            break;
+        case 'delete_cus':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                delete_cus($_GET['id']);
+            }
+            $list_cus = user_all("",0);
+            include 'customer/list.php';
             break;
         default:
             break;

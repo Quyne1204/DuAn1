@@ -3,68 +3,67 @@
     extract($products);
 }
 ?>
-<main>
-    <div class="quanly">
-        <form action="index.php?act=update_pro" method="post" enctype="multipart/form-data">
-            <div class="box-quanly">
-                <div class="box-item item">
-                    <h4 for="">DANH MỤC</h4> <br>
-                    <select name="iddm" id="">
-                       <?php 
+
+<div class="container">
+    <h2>Update sản phẩm</h2>
+
+    <form action="index.php?act=update_pro" method="POST" enctype="multipart/form-data">
+        <div class="form-body">
+
+            <div style="width:50%;">
+                <div class="form-label">
+                    <h3>Tên sản phẩm</h3>
+                    <input type="text" name="ten_hh" value="<?php echo $products_name?>" placeholder="Tên sản phẩm" required>
+                </div>
+
+                <div class="form-label">
+                    <h3>Đơn giá</h3>
+                    <input type="text" name="don_gia" value="<?php echo $money?>" placeholder="Đơn giá" required>
+                </div>
+
+                <div class="form-label">
+                    <h3>Hình ảnh</h3>
+                    <img width="100px" src="../images/sanpham/<?php echo $img?>" alt="">
+                    <input type="file" name="img" >
+                </div>
+            </div>
+
+            <div style="width:50%;">
+            
+                <div class="form-label">
+                    <h3>Danh mục</h3>
+                    <select name="iddm" required>
+                        <?php 
                             foreach ($listdanhmuc as $danhmuc) {
                                 extract($danhmuc);
-                                if($id_type == $type_id) {
-                                    echo '<option value="'.$id_type.'" selected>'.$type_name.'</option>';
-                                }else{
-                                    echo '<option value="'.$id_type.'">'.$type_name.'</option>';
-                                }
-                            } ?>
+                                echo "<option value=".$id_type.">$type_name</option>";
+                            } 
+                        ?>
                        </select>
+                    </select>
                 </div>
-                <div class="box-item item">
-                    <h4 for="">TÊN HÀNG HÓA</h4> <br>
-                    <input type="text" id="hanghoa" name="ten_hh" value="<?php echo $products_name ?>" required >
-                    <span class="focus-boder"></span>
+                <div class="form-label">
+                    <h3>Ngày nhập</h3>
+                    <input type="date" name="date" value="<?php echo $date_added?>" placeholder="Ngày nhập hàng" required>
                 </div>
-                <div class="box-item item">
-                    <h4 for="">ĐƠN GIÁ</h4> <br>
-                    <input type="text" id="hanghoa" name="don_gia" value="<?php echo $money ?>" required>
-                    <span class="focus-boder"></span>
+                <div class="form-label">
+                    <h3>Mô tả</h3>
+                    <textarea style="width:400px;height:100px" name="mo_ta" id="hanghoa" required><?php echo $detail?>"</textarea>
                 </div>
-                <div class="box-item item">
-                    <h4 for="">NGÀY NHẬP HÀNG</h4> <br>
-                    <input type="date" id="hanghoa" name="date" value="<?php echo $date_added ?>" required>
-                    <span class="focus-boder"></span>
-                </div>
-                <div class="box-item item">
-                    <h4 for="">MÔ TẢ</h4> <br>
-                    <textarea name="mo_ta" id="hanghoa" required ><?php echo $detail ?></textarea>
-                    <span class="focus-boder"></span>
-                </div>
-                <div class="box-item item">
 
-                </div>
-                
-                <div class="box-item item">
-                    <h4 for="">HÌNH ẢNH</h4> <br>
-                    <img width="200px" src="../images/sanpham/<?php echo $img ?>" alt="">
-                    <input type="file" id="hanghoa" name="img" >
-                    <span class="focus-boder"></span>
-                </div>
             </div>
-        
-            <div class="button-form">
-                <input type="hidden" name="id_sp" value="<?php echo $id_product ?>">
-                <input type="submit" name="update" value="Cập nhật"> 
-                <input type="reset" value="Nhập lại"> 
-                <a href="index.php?act=list_pro"><input type="button" value="Danh Sách"></a>
-            </div>
-                <?php
-                    if(isset($thongbao)&&($thongbao!=""))
-                    echo $thongbao;
-                ?>
 
-        </form>
-                          
-    </div>
-</main>
+        </div>
+
+        <div class="them">
+            <input class="hidden" type="hidden" name="id_sp" value="<?php echo $id_product ?>">
+            <input class="reset" type="submit" name="update" value="Update">
+            <input  type="reset" value="Nhập lại" class="reset">
+            <a href="index.php?act=list_pro"><input type="button" value="Danh sách" class="reset"></a>
+        </div>
+        <?php       
+            if(isset($thongbao)&&($thongbao!=""))
+            echo '<p style="color:red">'.$thongbao.'</p>';
+        ?>
+    </form>
+</div>

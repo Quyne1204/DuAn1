@@ -3,23 +3,24 @@
     extract($categories);
 }
 ?>
-<main>
-    <div class="quanly">
+<div class="container">
+    <h2>Update danh mục</h2>
         <form action="index.php?act=update_dm" method="post" enctype="multipart/form-data">
-            <div class="box-quanly">
-                
-                <div class="box-item item">
-                    <h4 for="">Tên Danh Mục</h4> <br>
-                    <input type="text" id="hanghoa" name="ten_hh" required value="<?php echo $type_name ?>">
-                    <span class="focus-boder"></span>
+            <div class="form-body">
+
+                <div style="width:50%;">
+                    <div class="form-label">
+                        <h3>Tên danh mục</h3>
+                        <input type="text" id="hanghoa" name="ten_hh" value="<?php echo $type_name ?>" required>
+                    </div>
                 </div>
             </div>
         
             <div class="button-form">
-            <input type="hidden" name="iddm" value="<?php echo $id_type ?>">
-                <input type="submit" name="update" value="Update"> 
-                <input type="reset" value="Nhập lại"> 
-                <a href="index.php?act=list_cate"><input type="button" value="Danh Sách"></a>
+                <input type="hidden" name="iddm" value="<?php echo $id_type ?>">
+                <input type="submit"  class="reset" name="update" value="Update"> 
+                <input type="reset"  class="reset" value="Nhập lại"> 
+                <a href="index.php?act=list_cate"><input type="button" class="reset" value="Danh Sách"></a>
             </div>
                    <?php
                      if(isset($thongbao)&&($thongbao!=""))
@@ -27,11 +28,7 @@
                     ?>
 
         </form>
-                          
-    </div>
-</main>
-
-
+</div>
 
 
 

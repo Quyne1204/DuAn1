@@ -7,6 +7,7 @@ include "../model/categories.php";
 include "../model/products.php";
 include "../model/bill.php";
 include "../model/cart.php";
+include "../model/customer.php";
 
 include "header.php";
 //controller
@@ -203,7 +204,25 @@ if (isset($_GET['act'])) {
             $list_bill = loadall_bill(0);  
             include 'bill/list_bill.php';
             break;
-
+////////khách hàng /////////////////////////////////////////////////////////////////////////////////////////////
+        
+        case 'list_cus':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
+            }
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+            }else{
+                $id =  0;
+            }
+            $list_cus = user_all($kyw, $id);
+            include 'customer/list.php';
+            break;
+        case 'add_cus':
+            include 'customer/add.php';
+            break;
         default:
             break;
     }

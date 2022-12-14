@@ -1,5 +1,5 @@
 <?php
- if(is_array($user)){
+    if(is_array($user)){
     extract($user);
 }
 ?>

@@ -27,9 +27,16 @@ if (isset($_GET['act'])) {
             }
             include 'categories/add.php';
             break;
-        case 'delete_dm':
+        case 'delete_cate':
             if(isset($_GET['id'])&&($_GET['id']>0)){
-                delete_danhmuc($_GET['id']);
+                $categories = loadone_danhmuc($_GET['id']);
+            }
+            include 'categories/delete.php';
+            break;
+        case 'deletecate':
+            if(isset($_POST['delete']) && ($_POST['delete'])){
+                $id = $_POST['id'];
+                delete_danhmuc($id);
             }
             $list_dm = loadall_danhmuc();
             include 'categories/list_cate.php';
@@ -88,12 +95,22 @@ if (isset($_GET['act'])) {
             include 'products/add.php';
             break;
 
-        case 'delete_pro':
+        case 'delete_pros':
             if(isset($_GET['id'])&&($_GET['id']>0)){
-                delete_product($_GET['id']);
+                $products = load_products_one($_GET['id']); 
+            }
+            include 'products/delete.php';
+            break;
+        case 'delete_pro':
+            if(isset($_POST['delete']) && ($_POST['delete'])){
+                $id_sp = $_POST['id_sp'];
+                delete_product($id_sp);
             }
             $sql = "select * from products order by date_added desc";
             $list_sp = pdo_query($sql);
+            
+            $list_dm = loadall_danhmuc();
+            $list_sp = loadall_product("", 0);
             include 'products/list_pro.php';
             break;
         case 'update_pros':
@@ -262,13 +279,22 @@ if (isset($_GET['act'])) {
             }
             include 'customer/list.php';
             break;
+            
         case 'delete_cus':
             if(isset($_GET['id'])&&($_GET['id']>0)){
-                delete_cus($_GET['id']);
+                $user = loadone_cus($_GET['id']);
+            }
+            include 'customer/delete.php';
+            break;
+        case 'deletecus':
+            if(isset($_POST['delete']) && ($_POST['delete'])){
+                $id = $_POST['id'];
+                delete_cus($id);
             }
             $list_cus = user_all("",0);
             include 'customer/list.php';
             break;
+        
         default:
             break;
     }

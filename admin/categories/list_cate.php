@@ -21,7 +21,7 @@
                             foreach ($list_dm as $dm) {
                                 extract($dm);
                                 $update_dm="index.php?act=update&id=".$id_type;
-                                $delete_dm="index.php?act=delete_dm&id=".$id_type;
+                                $delete_dm="index.php?act=delete_cate&id=".$id_type;
                                 echo '
                                     <tbody>
                                         <td>'.$id_type.'</td>

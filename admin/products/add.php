@@ -13,7 +13,7 @@
 
                 <div class="form-label">
                     <h3>Đơn giá</h3>
-                    <input type="text" name="don_gia" placeholder="Đơn giá" required>
+                    <input type="number" name="don_gia" placeholder="Đơn giá" required>
                 </div>
 
                 <div class="form-label">

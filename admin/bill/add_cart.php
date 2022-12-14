@@ -3,7 +3,7 @@
         <table>
             <tr>
                 <th width="1%">Tên Sản Phẩm</th>
-                <th width="1%"> Ảnh</th>
+                <th width="1%">Ảnh</th>
                 <th width="1%">Đơn giá</th>
                 <th width="1%">Số lượng</th>
                 <th width="1%">Thành tiền</th>

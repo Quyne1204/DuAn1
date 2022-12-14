@@ -9,9 +9,9 @@
         $bill = pdo_query_one($sql);
         return $bill;
     }
-    function loadall_bill($id_bill){
-        if(isset($id_bill)&&($id_bill != 0)){
-            $sql = "select * from bill where bill_id='$id_bill'";
+    function loadall_bill($kyw){
+        if(isset($kyw)&&($kyw != 0)){
+            $sql = "select * from bill where id_bill='$kyw' or name like '%".$kyw."%' ";
         }else{
             $sql = "select * from bill order by id_bill desc";
         }

@@ -3,11 +3,12 @@
 <section class="list_products">
 
     <div class="wrapper-table" style="margin-top: 0px;">
+    <!-- ///serach/// -->
         <div class="cot4">
             <div class="dropdown">
                 <a href="index.php?act=add_bill" ><input class="dropbtn adc" type="button" value="Thêm mới"></a>
             </div>
-            <form method="POST" action="index.php?act=list_pro">
+            <form method="POST" action="index.php?act=list_bill">
                 <div class="right3">
                     <div class="cot22">
                         <input id="id2" name="kyw" type="text" placeholder="Nhập...">
@@ -22,6 +23,7 @@
                 </div>
             </form>
         </div>
+
         <div class="category">
             <table>
                 <thead>

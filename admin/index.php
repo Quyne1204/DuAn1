@@ -147,7 +147,12 @@ if (isset($_GET['act'])) {
 ////////Bill/////////////////////////////////////////////////////////////////////////////////////////////////////
         
         case 'list_bill':
-            $list_bill = loadall_bill(0);
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
+            }
+            $list_bill = loadall_bill($kyw);
             include 'bill/list_bill.php';
             break;
         case 'add_bill':

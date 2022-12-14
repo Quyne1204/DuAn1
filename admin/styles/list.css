@@ -147,3 +147,107 @@ table{
     margin-left: 100px;
     font-weight: bold;
 }
+.list_sp{
+    width: 60%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+}
+#chon{
+    width: 70px;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px;
+}
+.cart1{
+    width: 230px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.hoadon{
+    width: 30%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px; 
+    padding-bottom: 20px; 
+    margin-right: 20px;
+}
+.next{
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: aqua;
+    margin-left: 100px;
+}
+
+.show-cart{
+    width: 60%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+}
+.table-body {
+    padding: 12px ;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.table-body > td {
+    background-color: #fff;
+    padding:  18px;
+}
+.pay-inform > input{
+    width: 300px;
+    border: 1px solid rgb(176, 176, 176);
+    padding: 10px;
+    border-radius: 20px;
+}
+.thanht{
+    width: 40%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px; 
+}
+.cart-img{
+    width: 80px;
+    height:80px;
+    margin-right: 20px;
+}
+.name-item{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p{
+    margin: 0px;
+    padding: 3px 0px;
+    box-sizing: border-box;
+}
+.price{
+    color: red;
+    font-weight: bold;
+}
+.xacnhan{
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    background-color: aqua;
+    border-radius: 20px;
+    margin-left: 200px;
+}

@@ -130,7 +130,9 @@
     margin-right: 10px;
     padding: 7px 14px;
     cursor: pointer;
-    border: 4px;
+    border: 1px solid rgb(221, 219, 219);
+    border-radius: 20px;
+
 }
 
 .inner-img {
@@ -171,6 +173,7 @@
 .banner-sale {
     width: var(--header-width);
     margin: 0 auto;
+    padding: 50px;
 }
 
 .banner-sale > img {
@@ -253,8 +256,19 @@
 }
 
 .laptop-img {
-    width: 100%;
+    width: 190px;
 }
-
+#buy{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 3px;
+    width: 50px;
+    text-align: center;
+    background-color: #6cb5e8;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #fff;
+}
 
 

@@ -90,15 +90,28 @@
                         $price = product_price($money);
                         $priceFloat = $money;
                         echo '
-                                <a href="index.php?act=detail&id_products=' . $id_product . '&id_categories=' . $type_id . '" class="product-item">
-                                    <div class="inner-item">
-                                        <img class="laptop-img" src="./images/sanpham/' . $img . '" >
-                                        <p class="inner-name">' . $products_name . '</p>
+                            <div class="inner-item">
+                                <a href="index.php?act=detail&id_products='.$id_product.'&id_categories='.$type_id.'" class="product-item">
+                                    <img class="laptop-img" src="./images/sanpham/' . $img . '" >
+                                    <p style="font-weight: bold;" class="inner-name">' . $products_name . '</p>
+                                </a>
+                                <div class="flex">
+                                    <div>
                                         <p style="display:none;" class="inner-price">' . $price . '</p>
                                         <p class="inner-price">' . product_price($priceFloat) . '</p>
                                         <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
                                     </div>
-                                </a>
+                                    <div >
+                                        <form action="index.php?act=addtocart" method="POST" style="width:100%"> 
+                                            <input type="hidden" name="id" value="'.$id_product.'">
+                                            <input type="hidden" name="name" value="'.$products_name.'">
+                                            <input type="hidden" name="img" value="'.$img.'">
+                                            <input type="hidden" name="money" value="'.$money.'">
+                                            <input id="buy" name="addtocart" type="submit" value="Mua ">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                             ';
                     }
                     ?>

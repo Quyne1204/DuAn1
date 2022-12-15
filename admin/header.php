@@ -16,7 +16,7 @@
     <div class="flex">
         <div class="left">
             <div class="Top">
-                <h1 style="  font-family: 'Inter', sans-serif;"  >G-Computer</h1>
+                <h1 style="color:red"  >G-Computer</h1>
             </div>
 
             <div class="admin">
@@ -122,8 +122,9 @@
         <div class="Content">
             <div class="xinchao">
                 <h2>Xin Chào   <span>  Admin</span>,</h2>
-                <div class="flex ">
+                <div class="flex">
                     <h1 >Welcome back 👋</h1>
-                    <a class="a1" href="../index.php" style="text-decoration: none;     font-family: 'Inter', sans-serif;"><h2>Xem Trang Web</h2></a>
+                    <a class="a1" href="../index.php" style="text-decoration: none;"><h2>Xem Trang Web</h2></a>
                 </div>
             </div>
+            <hr>

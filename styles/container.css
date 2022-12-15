@@ -136,7 +136,7 @@
 }
 
 .inner-img {
-    width: 162px;
+    width: 150px;
     transition: 0.3s;
     object-fit: cover;
 }
@@ -246,6 +246,7 @@
 }
 
 .list-product {
+    width: 1160px;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     gap: 10px;

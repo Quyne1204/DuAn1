@@ -1,15 +1,6 @@
 .flex{
     display: flex;
-   
 }
-.flex1{
-    
-   display: flex;
-padding-top: 50%;
-}
-
-
-
 .Top{
     width: 255px;
     height: 144px;
@@ -32,7 +23,7 @@ padding-top: 50%;
     padding:10px ;
     height: 100%;
     width: 215px;
-    border-right: 2px solid black;
+    border-right: 1px solid red;
 }
 .icon{
     padding-top: 7px;

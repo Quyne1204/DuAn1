@@ -8,7 +8,7 @@
         <form action="index.php?act=update_dm" method="post" enctype="multipart/form-data">
             <div class="form-body">
 
-                <div >
+                <div style="width:50%;">
                     <div class="form-label">
                         <h3>Tên danh mục</h3>
                         <input type="text" id="hanghoa" name="ten_hh" value="<?php echo $type_name ?>" required>

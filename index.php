@@ -16,6 +16,7 @@ include 'model/bill.php';
 $list_products = load_products_home();  
 $list_dm = loadall_danhmuc();
 $list_dmm = loadall_danhmucc();
+$list_products_top = load_products_top10();
 
 if(isset($_GET['act'])) {
 

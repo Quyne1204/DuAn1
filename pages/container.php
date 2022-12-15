@@ -44,28 +44,67 @@
         <section>
 
             <div class="brand">
-                <h2 class="mark-title">Thương hiệu nổi bật</h2>
+            <h2 class="mark-title">Thương Hiệu Nổi Bật</h2>
 
-                <div class="trade-mark">
-                    <!-- Asus -->
-                    <?php
-                        foreach ($list_dmm as $dm) {
-                            extract($dm);
-                            echo '
-                            <div class="mark-item">
-                                <!-- Link đến loại máy tính như hình -->
-                                <a href="index.php?act=danhmuc&id='.$id_type.'" class="mark-link"><img class="mark-img" src="images/logo/'.$img.'" alt=""></a>
-                                <figcaption class="mark-name">'.$type_name.'</figcaption>
-                            </div>';
-                        }
-                    ?>
-                    
+<div class="trade-mark">
 
-                    
+<div class="trade-mark">
+                <!-- Asus -->
+                <div class="mark-item">
+                    <!-- Link đến loại máy tính như hình -->
+                    <a href="#asus" class="mark-link"><img class="mark-img" src="https://lh3.googleusercontent.com/IqFtu_Hq7dQkOuTjKwVTjKV5Z1qK3FsuX3yX6Ab30i_yXZ2B1dFs8uQwQ9zgTt3UZts3RnuYx-ujvQW0i5Ox2UDhrqxeehI=w400-rw" alt=""></a>
+                    <figcaption class="mark-name">Asus</figcaption>
+                </div>
+
+                <!-- Lenovo -->
+                <div class="mark-item">
+                    <!-- Link đến loại máy tính như hình -->
+                    <a href="#lenovo" class="mark-link"><img class="mark-img" src="https://lh3.googleusercontent.com/s2A1-31VtturT9H1hX0UccGw7yGufXD2NZFJkiNt-tTCx2xZO80lCt21b8oY3AYWmi3aUuMQIIySp623gbQoN22Wm_YvKvnB=w400-rw" alt=""></a>
+                    <figcaption class="mark-name">Lenovo</figcaption>
+                </div>
+
+                <!-- Acer -->
+                <div class="mark-item">
+                    <!-- Link đến loại máy tính như hình -->
+                    <a href="#acer" class="mark-link"><img class="mark-img" src="https://w0.peakpx.com/wallpaper/816/427/HD-wallpaper-acer-dark-blue-logo-dark-blue-neon-lights-creative-dark-blue-abstract-background-acer-logo-brands-acer.jpg" alt=""></a>
+                    <figcaption class="mark-name">Acer</figcaption>
+                </div>
+
+                <!-- HP -->
+                <div class="mark-item">
+                    <!-- Link đến loại máy tính như hình -->
+                    <a href="#hp" class="mark-link"><img class="mark-img" src="https://lh3.googleusercontent.com/4YXRxEqxqmoY8EPliJtNkbcqQCUe4TPTJyAZ_MIsb8JStdwwf3PInwC0SABKuoZiHJC7dJY6Ex1JqS4bpKo=w400-rw" alt=""></a>
+                    <figcaption class="mark-name">HP</figcaption>
                 </div>
             </div>
 
-        </section>
+</div>
+
+</section>
+
+    <section>
+        <div class="brand">
+            <h2 class="">Top Sản Phẩm Nổi Bật</h2>
+
+            <div class="trade-mark">
+<?php
+                foreach ($list_products_top as $products) {
+                    extract($products);
+                    echo '
+                            <a href="index.php?act=detail&id_products=' . $id_product . '&id_categories=' . $type_id . '" class="product-item">
+                                <div class="inner-item">
+                                    <img class="laptop-img" src="./images/sanpham/' . $img . '" >
+                                    <p class="inner-name">' . $products_name . '</p>
+                </div>
+
+                            </a>
+                        ';
+                }
+                ?>
+
+        </div>
+
+    </section>
 
         <!-- List item laptop -->
         <section>
@@ -90,28 +129,15 @@
                         $price = product_price($money);
                         $priceFloat = $money;
                         echo '
-                            <div class="inner-item">
-                                <a href="index.php?act=detail&id_products='.$id_product.'&id_categories='.$type_id.'" class="product-item">
-                                    <img class="laptop-img" src="./images/sanpham/' . $img . '" >
-                                    <p style="font-weight: bold;" class="inner-name">' . $products_name . '</p>
-                                </a>
-                                <div class="flex">
-                                    <div>
+                                <a href="index.php?act=detail&id_products=' . $id_product . '&id_categories=' . $type_id . '" class="product-item">
+                                    <div class="inner-item">
+                                        <img class="laptop-img" src="./images/sanpham/' . $img . '" >
+                                        <p class="inner-name">' . $products_name . '</p>
                                         <p style="display:none;" class="inner-price">' . $price . '</p>
                                         <p class="inner-price">' . product_price($priceFloat) . '</p>
                                         <p class="sale"><del>17.990.000<span>đ</span></del> <span class="sold">-24.46%</span> </p>
                                     </div>
-                                    <div >
-                                        <form action="index.php?act=addtocart" method="POST" style="width:100%"> 
-                                            <input type="hidden" name="id" value="'.$id_product.'">
-                                            <input type="hidden" name="name" value="'.$products_name.'">
-                                            <input type="hidden" name="img" value="'.$img.'">
-                                            <input type="hidden" name="money" value="'.$money.'">
-                                            <input id="buy" name="addtocart" type="submit" value="Mua ">
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                                </a>
                             ';
                     }
                     ?>

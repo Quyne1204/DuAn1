@@ -76,9 +76,9 @@
                     <input type="text" value="<?=$address?>" name="address" required>
                 </div>
                 
-                <input type="submit" value="Update" name="update_bill">    
-                <input type="reset" value="Reset">
-                <input type="submit" value="No">
+                <input class="hidden" type="submit" value="Update" name="update_bill">    
+                <input class="hidden" type="reset" value="Reset">
+                <input class="hidden" type="submit" value="No">
             
         </div>
     </form>

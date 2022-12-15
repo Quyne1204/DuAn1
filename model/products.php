@@ -9,6 +9,12 @@
         $one_products = pdo_query_one($sql);
         return $one_products;
     }
+
+    function load_products_top10(){
+        $sql = "select * from products order by view desc limit 0,4";
+        $list_products = pdo_query($sql);
+        return $list_products;
+    }
     function insert_product($tensp, $date,$giasp, $name_img, $mo_ta, $iddm){
         $sql = "insert into products(products_name,money,img,date_added,detail,type_id) 
         values ('$tensp','$giasp','$name_img','$date','$mo_ta','$iddm')";

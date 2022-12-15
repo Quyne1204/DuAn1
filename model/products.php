@@ -11,7 +11,7 @@
     }
 
     function load_products_top10(){
-        $sql = "select * from products order by view desc limit 0,4";
+        $sql = "select * from products order by sold desc limit 0,4";
         $list_products = pdo_query($sql);
         return $list_products;
     }

@@ -58,4 +58,9 @@
             return "";
         }
     }
+    function sp_cungloai($id,$id_dm){
+        $sql = "select * from products where type_id=".$id_dm." AND id_product<>".$id;
+        $list_sp = pdo_query($sql);
+        return $list_sp;
+    }
 ?> 

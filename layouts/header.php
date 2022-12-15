@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/detail.css">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/update_user.css">
 
     <!-- // -->
 

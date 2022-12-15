@@ -1,58 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/update_user.css">
-    <title>Document</title>
-</head>
-
-<body>
+<?php include 'menu.php'; ?>
     <div class="wrapper-update-user">
 
+            <?php
+                if(isset($user)&&is_array($user)){
+                    extract($user);
+                }
+            ?>
         <div class="wrapper-account">
             <div class="user-block">
     
                 <img src="images/default-image.png" alt="">
     
-                <h3>Nguyễn Thanh</h3>
-                <p>Khách hàng</p>
-                <span>
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </span>
+                <h3><?=$user_name?></h3>
+                <p>
+                    <?php
+                        if($role == 2){
+                            echo 'Khách hàng';
+                        }else if($role == 1){
+                            echo 'Nhân viên';
+                        }
+                    ?>
+                </p>
+                
     
             </div>
     
             <div class="info-block">
-    
-                <h2>Thông tin khách hàng</h2>
+                <div class="flex">
+                    <h2>Thông tin tài khoản</h2>
+                    <a href="index.php?act=edit_tk&id=<?=$id_user?>" style="margin-top:7px; margin-left:10px">
+                        <span >
+                            <svg stroke="currentColor" fill="none" stroke-width="2" width="25px" height="25px"  viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="index.php?act=" style="margin-top:10px; margin-left:100px">
+                        <h5 style="color:blue">Xem đơn hàng của bạn</h5>
+                    </a>
+
+                </div>
     
                 <div class="information">
                     <div>
+                        <h4>Tài khoản :</h4>
+                        <p type="text" ><?=$user_name?></p>
+                    </div>
+                    <div>
+                        <h4>Mật khẩu :</h4>
+                        <p type="text" ><?=$password?></p>
+                    </div>
+                    <div>
                         <h4>Tên đầy đủ :</h4>
-                        <p>Nguyễn Trọng Thanh</p>
+                        <p><?=$full_name?></p>
                     </div>
     
                     <div>
                         <h4>Phone :</h4>
-                        <p>0123 456 789</p>
+                        <p><?=$phone_number?></p>
                     </div>
     
                     <div>
                         <h4>Địa chỉ :</h4>
-                        <p>0123 456 789</p>
+                        <p><?=$address?></p>
                     </div>
     
                     <div>
                         <h4>Email :</h4>
-                        <p>thanhs2fo4@gmail.com</p>
+                        <p><?=$email?></p>
                     </div>
                 </div>
     
@@ -92,7 +109,3 @@
 
 
     </div>
-
-</body>
-
-</html>

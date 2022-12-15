@@ -16,6 +16,7 @@
 }
 
 .user-block {
+    width:200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +47,7 @@
 
 .info-block {
     padding: 10px 20px;
+    width:700px;
 }
 
 .info-block h2 {
@@ -54,7 +56,7 @@
 
 .information {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     gap: 20px;
 }
 
@@ -80,6 +82,24 @@
 
 .icon-network:hover {
     color: #0083B0;
+}
+.sua input{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 100px;
+    padding: 10px;
+    background-color: aqua;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+
+}
+.information input{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid rgb(180, 179, 179);
+    border-radius: 20px;
+
 }
 
 

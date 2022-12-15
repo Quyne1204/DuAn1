@@ -68,7 +68,7 @@
                     options:{
                         title:{
                             display:true,
-                            text:'Sản phẩm bán chạy nhất',
+                            text:'Sản phẩm giá thấp nhất',
                             fontSize:25
                         }
                     }

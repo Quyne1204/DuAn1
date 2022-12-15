@@ -26,15 +26,15 @@
                 <div class="form-label">
                     <h3>Vai trò</h3>
                     <select name="role" >
-                    <?php
-                        if($role == 1) {
-                            echo '<option value="1" selected>Nhân viên</option>';
-                            echo '<option value="2">Khách hàng</option>';
-                        }else if($role == 2){
-                            echo '<option value="1">Nhân viên</option>';
-                            echo '<option value="2" selected>Khách hàng</option>';
-                        }
-                ?>
+                        <?php
+                            if($role == 1) {
+                                echo '<option value="1" selected>Nhân viên</option>';
+                                echo '<option value="2">Khách hàng</option>';
+                            }else if($role == 2){
+                                echo '<option value="1">Nhân viên</option>';
+                                echo '<option value="2" selected>Khách hàng</option>';
+                            }
+                        ?>
                     </select>
                 </div>
             </div>

@@ -8,6 +8,7 @@ include "../model/products.php";
 include "../model/bill.php";
 include "../model/cart.php";
 include "../model/customer.php";
+include "../model/comment.php";
 include "../model/statistical.php";
 
 include "header.php";
@@ -223,11 +224,15 @@ if (isset($_GET['act'])) {
         case 'updatebill':
             if(isset($_POST['update_bill'])&&($_POST['update_bill'])){
                 $id = $_POST['id_bill'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address'];
                 $ttdh = $_POST['ttdh'];
 
-                bill_update($id, $ttdh);
+                bill_update($id,$name,$email,$phone,$address,$ttdh);
             }
-            $list_bill = loadall_bill(0);  
+            $list_bill = loadall_bill("");  
             include 'bill/list_bill.php';
             break;
 ////////khách hàng /////////////////////////////////////////////////////////////////////////////////////////////
@@ -322,6 +327,30 @@ if (isset($_GET['act'])) {
         case 'chart_4':
             $dsthongke = top_sp3();
             include 'statistical/chart4.php';
+            break;
+///////cmt.//////
+        case 'list_com':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
+            }
+            $list_cmt = cmt_all($kyw);
+            include 'comment/list.php';
+            break;
+        case 'delete_cmt':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $cmt = cmt_one($_GET['id']);
+            }
+            include 'comment/delete.php';
+            break;
+        case 'deletecmt':
+            if(isset($_POST['delete']) && ($_POST['delete'])){
+                $id = $_POST['id'];
+                cmt_delete($id);
+            }
+            $list_cmt = cmt_all("");
+            include 'comment/list.php';
             break;
         default:
             break;

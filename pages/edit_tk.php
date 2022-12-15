@@ -1,61 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/update_user.css">
-    <title>Document</title>
-</head>
-
-<body>
+<?php include 'menu.php'; ?>
     <div class="wrapper-update-user">
 
+            <?php
+                if(isset($user)&&is_array($user)){
+                    extract($user);
+                }
+            ?>
         <div class="wrapper-account">
             <div class="user-block">
     
                 <img src="images/default-image.png" alt="">
     
-                <h3>Nguyễn Thanh</h3>
+                <h3><?=$user_name?></h3>
                 <p>Khách hàng</p>
-                <span>
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </span>
+                
     
             </div>
     
             <div class="info-block">
-    
-                <h2>Thông tin khách hàng</h2>
-    
-                <div class="information">
-                    <div>
-                        <h4>Tên đầy đủ :</h4>
-                        <p>Nguyễn Trọng Thanh</p>
-                    </div>
-    
-                    <div>
-                        <h4>Phone :</h4>
-                        <p>0123 456 789</p>
-                    </div>
-    
-                    <div>
-                        <h4>Địa chỉ :</h4>
-                        <p>0123 456 789</p>
-                    </div>
-    
-                    <div>
-                        <h4>Email :</h4>
-                        <p>thanhs2fo4@gmail.com</p>
-                    </div>
+                <div class="flex">
+                    <h2>Sửa thông tin</h2>
                 </div>
-    
+                <form action="index.php?act=edit_user" method="POST">
+                    <div class="information">
+                        <div>
+                            <h4>Tài khoản :</h4>
+                            <input type="text" value="<?=$user_name?>" name="user_name">
+                        </div>
+                        <div>
+                            <h4>Mật khẩu :</h4>
+                            <input type="text" value="<?=$password?>" name="pass">
+                        </div>
+                        <div>
+                            <h4>Tên đầy đủ :</h4>
+                            <input type="text" value="<?=$full_name?>" name="name">
+                        </div>
+        
+                        <div>
+                            <h4>Phone :</h4>
+                            <input type="text" value="<?=$phone_number?>" name="phone">
+                        </div>
+        
+                        <div>
+                            <h4>Địa chỉ :</h4>
+                            <input type="text" value="<?=$address?>" name="address">
+                        </div>
+        
+                        <div>
+                            <h4>Email :</h4>
+                            <input type="text" value="<?=$email?>" name="email">
+                        </div>
+                    </div>
+                    <div class="flex sua">
+                        <input type="hidden" name="id" value="<?=$id_user?>">
+                        <input type="submit" name="yes" value="Sửa">
+                        <input type="submit" name="no" value="Không">
+                    </div>
+                </form>
                 <div class="tab-network">
     
                     <div class="icon-network">
@@ -92,7 +93,3 @@
 
 
     </div>
-
-</body>
-
-</html>

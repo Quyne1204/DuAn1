@@ -13,7 +13,7 @@ include 'model/products.php';
 include 'model/customer.php';
 include 'model/comment.php';
 include 'model/bill.php';
-$list_products = load_products_home();
+$list_products = load_products_home();  
 $list_dm = loadall_danhmuc();
 $list_dmm = loadall_danhmucc();
 
@@ -59,18 +59,38 @@ if(isset($_GET['act'])) {
 
                 $login = user_login($user_name,$password);
                 $_SESSION['user'] = $login;
-                if(isset($_SESSION['user'])&&($_SESSION['user']['role']==1)){
-                    echo "<script>window.location.href='admin/index.php';</script>";
-                }else if($_SESSION['user']['role']==2){
-                    echo "<script>window.location.href='index.php';</script>";
+                if(is_array($login)){
+                    if($_SESSION['user']['role']==1){
+                        echo "<script>window.location.href='admin/index.php';</script>";
+                    }else if($_SESSION['user']['role']==2){
+                        echo "<script>window.location.href='index.php';</script>";
+                    }
                 }else{
                     $tb="Thông tin đăng nhập không đúng hoặc tài khoản chưa được đăng ký";
                 }
             }
             include 'form/login.php';
             break;
-
-        
+        case 'edit_tk':
+            if(isset($_GET['id'])&&($_GET['id'])){
+                $user = loadone_cus($_GET['id']);
+            }
+            include 'pages/edit_tk.php';
+            break;
+        case 'edit_user':
+            if(isset($_POST['yes'])&&($_POST['yes'])){
+                $id = $_POST['id'];
+                $user_name = $_POST['user_name'];
+                $password = $_POST['pass'];
+                $name = $_POST['name'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                update_cus($id,$user_name, $password,$name, $email, $phone, $address,'2');
+                $user = loadone_cus($id);
+            }
+            include 'pages/account_detail.php';
+            break;
         case 'logout':
             session_destroy();
             unset($_SESSION['user']);
@@ -83,6 +103,7 @@ if(isset($_GET['act'])) {
                 $id=$_GET['id_products'];
                 $one_products = load_products_one($id);
                 extract($one_products);
+                $sp_cungloai = sp_cungloai($id,$type_id);
                 include 'pages/detail.php'; 
             }else{
                 include 'pages/container.php';

@@ -83,5 +83,40 @@
                 <p class="policy-sub"><span class="icon-policy"></span> Bảo hành tại nhà.</p>
             </div>
         </div>
+
+        <div class="detail-page">
+            <div class="box6">
+                <h3>Bình luận</h3>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                            $("#cmt").load("pages/cmt.php",{id_pro:<?=$id_product?>});
+                    });
+                </script>
+                <div id="cmt"></div>
+            </div>
+
+            <div class="box6">
+                <h3>Sản phẩm cùng loại</h3>
+                <div class="flex box7">
+                    <?php
+                        foreach ($sp_cungloai as $spcl) {
+                            extract($spcl); 
+                            echo '
+                                <li >
+                                    <a href="index.php?act=detail&id_products='.$id_product.'&id_categories='.$type_id.'" class="flex ">
+                                        <img style="width:60px;height:60px;" src="images/sanpham/'.$img.'">
+                                        <div>
+                                            <p style="font-weight:bold;">'.$products_name.'</p>
+                                            <p style="color:red">'.$money.'</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                ';
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
     </section>
 </nav>

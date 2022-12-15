@@ -37,8 +37,7 @@
                 </thead>
                 <?php
                     foreach ($list_bill as $bill) {
-                        extract($bill);
-                        $update_bill ="index.php?act=update_bill&id=".$id_bill; 
+                        extract($bill); 
                         $count = loadall_bill_count($bill['id_bill']);
                         $status = get_status($bill['status']);
                         echo '<tr>

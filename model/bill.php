@@ -24,8 +24,10 @@
         return sizeof($dsbill);
     }
     
-    function bill_update($id, $ttdh){
-        $sql = "update bill set status=$ttdh where id_bill=".$id;
+    function bill_update($id,$name,$email,$phone,$address,$ttdh){
+        $sql = "update bill set 
+                status='$ttdh' , name='$name' , email = '$email' , phone = '$phone' , address='$address' 
+                where id_bill=$id";
         pdo_execute($sql);
     }
     function get_status($n){

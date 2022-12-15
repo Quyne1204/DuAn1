@@ -1,7 +1,7 @@
 <?php
-    function insert_bill($user_id,$full_name,$address,$phone_number,$email,$date,$total_cart,$bill_pay){
-        $sql = "insert into bill(user_id,name,address,phone,email,bill_pay,date,total) 
-                    values('$user_id','$full_name','$address','$phone_number','$email','$bill_pay','$date','$total_cart')";
+    function insert_bill($user_id,$full_name,$address,$phone_number,$email,$bill_pay,$date,$total_cart,$status){
+        $sql = "insert into bill(user_id,name,address,phone,email,bill_pay,date,total,status) 
+    values($user_id,'$full_name','$address','$phone_number','$email','$bill_pay','$date','$total_cart','$status')";
         return pdo_execute_return_lastInsertId($sql);
     }
     function loadone_bill($id_bill){
@@ -10,7 +10,7 @@
         return $bill;
     }
     function loadall_bill($kyw){
-        if(isset($kyw)&&($kyw != 0)){
+        if(isset($kyw)&&($kyw != "")){
             $sql = "select * from bill where id_bill='$kyw' or name like '%".$kyw."%' ";
         }else{
             $sql = "select * from bill order by id_bill desc";
@@ -42,13 +42,18 @@
             case '3':
                 $tt = "Giao hàng thành công";
                 break;
+            case '4':
+                $tt = "Đơn hàng đã hoàn tất";
+                break;
+            case '5':
+                $tt = "Đơn hàng đã hủy";
+                break;
             
             default:
                 $tt = "Đang tạo đơn hàng";
                 break;
         }
         return $tt;
-    }
-        
+    }  
     
 ?>

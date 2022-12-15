@@ -251,3 +251,37 @@ p{
     border-radius: 20px;
     margin-left: 200px;
 }
+.pad{
+    text-align: center;
+    padding: 5px 0px;
+}
+.list-chart{
+    width:1050px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px; 
+    margin: auto;
+    margin-bottom: 20px;
+}   
+.list_tk{
+    margin: auto;
+    width: 1050px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px; 
+}
+.list-chart p{
+    padding: 15px;
+    margin-right: 20px;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+}
+.list-chart p a{
+    text-decoration: none;
+    color: white;
+}

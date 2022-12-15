@@ -3,20 +3,20 @@
                     <div class="show-cart">
                         <table>
                             <tr class="table-body">
-                                <td class="">Họ tên khách hàng  </td>
-                                <td class="pay-inform"><input class="pay-input"  name="full_name" placeholder="Nhập..." type="text"></td>
+                                <td class="">Họ tên khách hàng*  </td>
+                                <td class="pay-inform"><input class="pay-input"  name="full_name" placeholder="Nhập..." type="text" required></td>
                             </tr>
                             <tr class="table-body">
                                 <td class="">Email </td>
                                 <td class="pay-inform"><input class="pay-input"  name="email" placeholder="Nhập..." type="text"></td>
                             </tr>
                             <tr class="table-body">
-                                <td class="">Số điện thoại </td>
-                                <td class="pay-inform"><input class="pay-input"  name="phone_number" placeholder="Nhập..." type="text"></td>
+                                <td class="">Số điện thoại* </td>
+                                <td class="pay-inform"><input class="pay-input"  name="phone_number" placeholder="Nhập..." type="text" required></td>
                             </tr>
                             <tr class="table-body">
-                                <td class="">Địa chỉ </td>
-                                <td class="pay-inform"><input class="pay-input"  name="address" placeholder="Nhập..." type="text"></td>
+                                <td class="">Địa chỉ* </td>
+                                <td class="pay-inform"><input class="pay-input"  name="address" placeholder="Nhập..." type="text" required></td>
                             </tr>
                             <tr class="table-body">
                                 <td class="">Phương thức thanh toán </td>

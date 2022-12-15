@@ -8,6 +8,7 @@ include "../model/products.php";
 include "../model/bill.php";
 include "../model/cart.php";
 include "../model/customer.php";
+include "../model/statistical.php";
 
 include "header.php";
 //controller
@@ -200,15 +201,16 @@ if (isset($_GET['act'])) {
                 $date = date("y-m-d",time());
                 $total_cart= total_cart1();
                 $bill_pay = $_POST['bill_pay'];
+                $status = 4;
 
-                $id_bill = insert_bill(5,$full_name,$address,$phone_number,$email,$date,$total_cart,$bill_pay);
+                $id_bill = insert_bill(1,$full_name,$address,$phone_number,$email,$bill_pay,$date,$total_cart,$status);
 
                 foreach($_SESSION['admincart'] as $cart){
-                    insert_cart(5,$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$id_bill);
+                    insert_cart($_SESSION['user']['id_user'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$id_bill);
                 }
                 $_SESSION['admincart']=[];
             }
-            $list_bill = loadall_bill(0);
+            $list_bill = loadall_bill("");
             include 'bill/list_bill.php';
             break;
 
@@ -299,7 +301,28 @@ if (isset($_GET['act'])) {
             $list_cus = user_all("",0);
             include 'customer/list.php';
             break;
-        
+////////thống kê //////////////////////////////////////////////////////////////////////////////////////
+
+        case 'list_tk':
+            $dsthongke = load_statis();
+            include 'statistical/list.php';
+            break;
+        case 'chart_1':
+            $dsthongke = load_statis();
+            include 'statistical/chart1.php';
+            break;
+        case 'chart_2':
+            $dsthongke = top_sp1();
+            include 'statistical/chart2.php';
+            break;
+        case 'chart_3':
+            $dsthongke = top_sp2();
+            include 'statistical/chart3.php';
+            break;
+        case 'chart_4':
+            $dsthongke = top_sp3();
+            include 'statistical/chart4.php';
+            break;
         default:
             break;
     }
